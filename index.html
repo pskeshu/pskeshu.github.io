@@ -34,6 +34,11 @@
             right: 0;
             background: var(--bg-color);
             z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header.hide {
+            transform: translateY(-100%);
         }
 
         nav {
@@ -82,12 +87,40 @@
             font-size: 1.5rem;
             font-weight: normal;
             color: var(--text-color);
+            margin-bottom: 3rem;
+        }
+
+        .goals {
+            margin-top: 4rem;
+            text-align: left;
+        }
+
+        .goals h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .goals ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .goals li {
+            color: var(--light-text);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 0 2rem;
         }
 
         @media (max-width: 600px) {
             nav a {
                 font-size: 1.2rem;
-                padding: 1.2rem 0.5rem;  /* Increased touch target */
+                padding: 1.2rem 0.5rem;
             }
             
             nav {
@@ -97,9 +130,13 @@
             .content {
                 margin-top: 80px;
             }
+
+            .goals li {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
         }
 
-        /* Active state for touch feedback */
         @media (hover: none) {
             nav a:active {
                 background-color: rgba(0,0,0,0.05);
@@ -119,6 +156,39 @@
     <main class="content">
         <h1><strong>Kesavan PS</strong></h1>
         <h2>Phenomenologist</h2>
+
+        <section class="goals">
+            <h3>Goals</h3>
+            <ul>
+                <li>To bridge the gap between microscopy images and biological insight through a domain-driven understanding of human expertise, cellular behavior, and microscope capabilities.</li>
+                <li>To develop frameworks that honor both the objective rigor of scientific measurement and the subjective experience of discovery.</li>
+                <li>To explore the nature of observation itself, understanding how different forms of intelligence - human, biological, and technological - contribute to scientific knowledge.</li>
+            </ul>
+        </section>
     </main>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+                // Scrolling down
+                header.classList.add('hide');
+            } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+                // Scrolling up
+                header.classList.remove('hide');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 </html>
