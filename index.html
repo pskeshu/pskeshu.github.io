@@ -9,7 +9,6 @@
             --text-color: #2c3e50;
             --light-text: #666;
             --bg-color: #ffffff;
-            --spacing: 1.5rem;
         }
 
         * {
@@ -23,82 +22,103 @@
             color: var(--text-color);
             line-height: 1.6;
             background: var(--bg-color);
-            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 0.5rem;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-color);
+            z-index: 1000;
+        }
+
+        nav {
             max-width: 800px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+            padding: 1rem 1.5rem;
+            display: block;
+            width: 33.33%;
+            text-align: center;
+        }
+
+        nav a:hover {
+            color: var(--light-text);
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        h1 strong {
+            font-weight: bold;
         }
 
         h2 {
             font-size: 1.5rem;
             font-weight: normal;
-            margin-bottom: 2rem;
-        }
-
-        .goals {
-            margin: 3rem auto;
-            max-width: 600px;
-            text-align: left;
-            padding: 0 1rem;
-        }
-
-        .goals h2 {
-            text-align: center;
             color: var(--text-color);
-            margin-bottom: 1.5rem;
         }
 
-        .goals ul {
-            list-style: none;
+        @media (max-width: 600px) {
+            nav a {
+                font-size: 1.2rem;
+                padding: 1.2rem 0.5rem;  /* Increased touch target */
+            }
+            
+            nav {
+                justify-content: space-between;
+            }
+            
+            .content {
+                margin-top: 80px;
+            }
         }
 
-        .goals li {
-            margin-bottom: 1rem;
-            color: var(--light-text);
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--light-text);
-        }
-
-        .links {
-            margin-top: 3rem;
-        }
-
-        .links h2 {
-            margin-bottom: 1rem;
+        /* Active state for touch feedback */
+        @media (hover: none) {
+            nav a:active {
+                background-color: rgba(0,0,0,0.05);
+            }
         }
     </style>
 </head>
 <body>
-    <h1><strong>Kesavan PS</strong></h1>
-    <h2>Phenomenologist</h2>
+    <header>
+        <nav>
+            <a href="about.html">about</a>
+            <a href="cv.html">cv</a>
+            <a href="poems.html">poems</a>
+        </nav>
+    </header>
 
-    <section class="goals">
-        <h2>Goals</h2>
-        <ul>
-            <li>To bridge the gap between microscopy images and biological insight through a domain-driven understanding of human expertise, cellular behavior, and microscope capabilities.</li>
-            <li>To develop frameworks that honor both the objective rigor of scientific measurement and the subjective experience of discovery.</li>
-            <li>To explore the nature of observation itself, understanding how different forms of intelligence - human, biological, and technological - contribute to scientific knowledge.</li>
-        </ul>
-    </section>
-
-    <div class="links">
-        <h2><a href="cv.html">cv</a></h2>
-        <h2><a href="poems.html">poems</a></h2>
-    </div>
+    <main class="content">
+        <h1><strong>Kesavan PS</strong></h1>
+        <h2>Phenomenologist</h2>
+    </main>
 </body>
 </html>
