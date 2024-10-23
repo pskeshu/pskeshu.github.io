@@ -7,10 +7,9 @@
     <style>
         :root {
             --text-color: #2c3e50;
-            --link-color: #34495e;
-            --hover-color: #3498db;
-            --bg-color: #ffffff;
             --light-text: #666;
+            --bg-color: #ffffff;
+            --spacing: 1.5rem;
         }
 
         * {
@@ -21,110 +20,85 @@
 
         body {
             font-family: 'Times New Roman', Times, serif;
-            background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background: var(--bg-color);
             padding: 2rem;
-        }
-
-        .container {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
-            max-width: 700px;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-weight: normal;
-        }
-
-        h1 strong {
-            font-weight: bold;
         }
 
         h2 {
             font-size: 1.5rem;
             font-weight: normal;
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
+            margin-bottom: 2rem;
         }
 
-        .about {
-            margin: 3rem 0;
-            text-align: justify;
+        .goals {
+            margin: 3rem auto;
+            max-width: 600px;
+            text-align: left;
             padding: 0 1rem;
-            font-size: 1.1rem;
+        }
+
+        .goals h2 {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .goals ul {
+            list-style: none;
+        }
+
+        .goals li {
+            margin-bottom: 1rem;
             color: var(--light-text);
+            font-size: 1.1rem;
             line-height: 1.8;
         }
 
-        .about p {
-            margin-bottom: 1.5rem;
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--light-text);
         }
 
         .links {
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
-        .nav-link {
-            display: inline-block;
-            margin: 0 1rem;
-            color: var(--link-color);
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-            padding: 0.5rem 1rem;
-        }
-
-        .nav-link:hover {
-            color: var(--hover-color);
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.25rem;
-            }
-
-            .about {
-                font-size: 1rem;
-                padding: 0 0.5rem;
-            }
+        .links h2 {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1><strong>Kesavan PS</strong></h1>
-        <h2>Phenomenologist</h2>
+    <h1><strong>Kesavan PS</strong></h1>
+    <h2>Phenomenologist</h2>
 
-        <section class="about">
-            <p>
-                I explore the intersection of scientific observation and phenomenological experience, studying how we perceive and understand cellular life through microscopy. My work bridges the gap between objective measurement and subjective experience in biological research.
-            </p>
-            <p>
-                As a cell biologist and phenomenologist, I investigate how our methods of observation shape our understanding of living systems. This dual approach allows me to examine both the physical structures we study and the consciousness that perceives them.
-            </p>
-            <p>
-                Through poetry and scientific inquiry, I seek to understand the layers of meaning in our exploration of life's fundamental processes.
-            </p>
-        </section>
+    <section class="goals">
+        <h2>Goals</h2>
+        <ul>
+            <li>To bridge the gap between microscopy images and biological insight through a domain-driven understanding of human expertise, cellular behavior, and microscope capabilities.</li>
+            <li>To develop frameworks that honor both the objective rigor of scientific measurement and the subjective experience of discovery.</li>
+            <li>To explore the nature of observation itself, understanding how different forms of intelligence - human, biological, and technological - contribute to scientific knowledge.</li>
+        </ul>
+    </section>
 
-        <nav class="links">
-            <a href="cv.html" class="nav-link">cv</a>
-            <a href="poems.html" class="nav-link">poems</a>
-        </nav>
+    <div class="links">
+        <h2><a href="cv.html">cv</a></h2>
+        <h2><a href="poems.html">poems</a></h2>
     </div>
 </body>
 </html>
