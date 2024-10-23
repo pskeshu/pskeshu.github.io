@@ -1,9 +1,130 @@
-<h1><strong>Kesavan PS</strong></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesavan PS - Phenomenologist</title>
+    <style>
+        :root {
+            --text-color: #2c3e50;
+            --link-color: #34495e;
+            --hover-color: #3498db;
+            --bg-color: #ffffff;
+            --light-text: #666;
+        }
 
-<h2>Phenomenologist</h2>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<h2>&nbsp;</h2>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
 
-<h2><a href="cv.html">cv</a></h2>
+        .container {
+            text-align: center;
+            max-width: 700px;
+        }
 
-<h2><a href="poems.html">poems</a></h2>
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        h1 strong {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .about {
+            margin: 3rem 0;
+            text-align: justify;
+            padding: 0 1rem;
+            font-size: 1.1rem;
+            color: var(--light-text);
+            line-height: 1.8;
+        }
+
+        .about p {
+            margin-bottom: 1.5rem;
+        }
+
+        .links {
+            margin-top: 2rem;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin: 0 1rem;
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-link:hover {
+            color: var(--hover-color);
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .about {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>Kesavan PS</strong></h1>
+        <h2>Phenomenologist</h2>
+
+        <section class="about">
+            <p>
+                I explore the intersection of scientific observation and phenomenological experience, studying how we perceive and understand cellular life through microscopy. My work bridges the gap between objective measurement and subjective experience in biological research.
+            </p>
+            <p>
+                As a cell biologist and phenomenologist, I investigate how our methods of observation shape our understanding of living systems. This dual approach allows me to examine both the physical structures we study and the consciousness that perceives them.
+            </p>
+            <p>
+                Through poetry and scientific inquiry, I seek to understand the layers of meaning in our exploration of life's fundamental processes.
+            </p>
+        </section>
+
+        <nav class="links">
+            <a href="cv.html" class="nav-link">cv</a>
+            <a href="poems.html" class="nav-link">poems</a>
+        </nav>
+    </div>
+</body>
+</html>
