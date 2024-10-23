@@ -1,232 +1,295 @@
-<h1 style="text-align:center">Curriculum Vitae (Jun 2023)</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesavan Paruthi Subburam - CV</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --link-color: #3498db;
+            --text-color: #333;
+            --border-color: #eee;
+        }
 
-<table border="1" cellpadding="1.5" cellspacing="1" style="width:500px">
-	<tbody>
-		<tr>
-			<td><strong>Name</strong></td>
-			<td>
-			<p style="text-align:justify">P S Kesavan</p>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-			<p style="text-align:justify">&nbsp;</p>
-			</td>
-		</tr>
-		<tr>
-			<td><strong>Born</strong></td>
-			<td>
-			<p style="text-align:justify">Rajapalayam, Tamil Nadu, India in August 1993</p>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+        }
 
-			<p style="text-align:justify">&nbsp;</p>
-			</td>
-		</tr>
-		<tr>
-			<td><strong>Research Area</strong></td>
-			<td>
-			<p style="text-align:justify">Cell Biology, Biophysics, Microscopy</p>
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
 
-			<p style="text-align:justify">&nbsp;</p>
-			</td>
-		</tr>
-		<tr>
-			<td><strong>Email Address</strong></td>
-			<td>
-			<p style="text-align:justify">kesavan.subburam@med.lu.se</p>
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
 
-			<p style="text-align:justify">&nbsp;</p>
-			</td>
-		</tr>
-		<tr>
-			<td><strong>Nationality/Gender</strong></td>
-			<td>Indian/Male</td>
-		</tr>
-	</tbody>
-</table>
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
 
-<p style="text-align:justify"><br />
-&nbsp;</p>
+        .contact-info {
+            margin: 1rem 0;
+        }
 
-<h2 style="text-align:justify">Personal Statement (December 2022)</h2>
+        .contact-info i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
 
-<p style="text-align:justify">I am a cell biologist with a special interest in developing &ldquo;smart&rdquo; microscopic methods that can be used in different biological contexts to access reliable statistics. In addition to the mean, such methods yield insight into population-level heterogeneity of a variety of cellular responses. The first part of my doctoral studies focused on developing fluorescence anisotropy imaging to monitor changes to chromatin compaction states with DNA damage in living cells. Live cell dynamics could be correlated to fixed cell immunofluorescence, identifying spatiotemporal relationships between chromatin and processes of DNA repair.&nbsp;</p>
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
 
-<p style="text-align:justify">In the above experiments, I found manual control of microscopy, which can be both labour-intensive and prone to human error, to be majorly limiting in terms of obtaining reliable statistics, especially for live cell dynamics. Thus, towards the end of my PhD, my interest shifted towards developing a software platform to perform large-scale automatic imaging experiments, both in terms of acquisition and online analysis, without human intervention. Reliable limiting histograms were obtained and rare subpopulations were identified in such &ldquo;high N&rdquo; investigations of DNA damage responses. These were proof-of-concept examples, and this tool is open-source and can be customized to the needs of a specific experiment, and can yield high throughput datasets from regular motorized widefield microscopes that are comparable to High Content Screening systems, thus making such large statistics investigations more widely accessible. Such was my excitement about these approaches, that I even founded a research company, NDimensional Systems, to make such tools widely available. This was a valuable lesson in entrepreneurship for me.&nbsp;</p>
+        a:hover {
+            text-decoration: underline;
+        }
 
-<p style="text-align:justify">In the future, I aim to develop hardware and software automation technologies to perform microscopic investigations at high throughput without any human intervention, thus yielding scientific understanding in a wide variety of biological contexts.</p>
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
 
-<p style="text-align:justify">&nbsp;</p>
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
 
-<h2 style="text-align:justify"><strong>Education</strong></h2>
+        .experience-title {
+            font-weight: bold;
+        }
 
-<table border="1" cellpadding="1" cellspacing="1" style="height:265px; width:500px">
-	<tbody>
-		<tr>
-			<td>2023 - present</td>
-			<td>Faculty of Medicine, Lund University</td>
-			<td>Wenner-Gren Postdoctoral Fellow</td>
-			<td>Automated understanding of DNA damage responses</td>
-		</tr>
-		<tr>
-			<td>2015 - 2023</td>
-			<td>Tata Institute of Fundamental Research, Hyderabad</td>
-			<td>PhD</td>
-			<td>Microscopy and image analysis based enhancements for investigating DNA damage responses in cells</td>
-		</tr>
-		<tr>
-			<td>2011- 2015</td>
-			<td>Karunya University, Coimbatore</td>
-			<td>
-			<p style="text-align:justify">B. Tech in Biotechnology &nbsp;</p>
+        .experience-date {
+            color: #666;
+        }
 
-			<p style="text-align:justify">&nbsp;</p>
-			</td>
-			<td>
-			<p>CGPA &ndash; 7.7 / 10.0</p>
+        .experience-institution {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
 
-			<p>Qualified GATE</p>
-			</td>
-		</tr>
-		<tr>
-			<td>2011</td>
-			<td>Kendriya Vidyalaya CLRI, Chennai</td>
-			<td>
-			<p>Class XII&nbsp;</p>
-			</td>
-			<td>
-			<p>Biotechnology</p>
+        .achievements {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
 
-			<p style="text-align:justify">Overall Score - 73%</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+        .skills-list {
+            list-style: none;
+        }
 
-<p style="text-align:justify">&nbsp;</p>
+        .skills-category {
+            margin-bottom: 1rem;
+        }
 
-<p>&nbsp;</p>
+        .skills-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
 
-<h2 style="text-align:justify"><strong>Professional Experience</strong></h2>
+        .subskills {
+            margin-left: 1.5rem;
+            list-style: none;
+        }
 
-<ul>
-	<li><strong>Wenner-Gren Postdoctoral Fellow</strong>
+        .subskills li::before {
+            content: "–";
+            margin-right: 0.5rem;
+        }
 
-	<ul>
-		<li><strong>Prof. Pontus Nordenfelt, Lund University, Lund</strong></li>
-		<li><strong>January 2023 - present</strong></li>
-		<li style="text-align:justify"><strong>Title: Developing tools for understanding cellular behaviours across scales with light microscopy</strong></li>
-		<li style="text-align:justify"><strong>Description: </strong>Cellular structure and dynamics can be studied with light microscopy with genetic and chemical perturbations. I develop automation to bridge tools of optics, fluidics, cell biology and computation to <a href="https://academic.oup.com/book/36363?login=false">understand</a> cells automatically.</li>
-	</ul>
-	</li>
-	<li><strong>Research Scholar </strong>
-	<ul>
-		<li><strong>Prof. Aprotim Mazumder, Tata Institute of Fundamental Research, Hyderabad</strong></li>
-		<li><strong>January 2016 - December 2022</strong></li>
-		<li style="text-align:justify"><strong>Title: Microscopy and image analysis based enhancements for investigating DNA damage responses in cells</strong></li>
-		<li style="text-align:justify"><strong>Description: </strong>Cells are constantly undergoing DNA damage, which is repaired by a system of proteins which work within the context of chromatin. I addressed how chromatin is remodelled upon damage to the underlying DNA by modifying a commercial widefield fluorescence microscope extensively and further developed a host of open-source libraries to automate large parts of imaging in general.</li>
-	</ul>
-	</li>
-	<li><strong>Project Student</strong>
-	<ul>
-		<li><strong>Prof. Desirazu Narasimha Rao</strong>, Biochemistry, <strong>Indian Institute of Science, Bangalore</strong></li>
-		<li><strong>November 2014 - April 2015</strong></li>
-		<li style="text-align:justify"><strong>Title: Characterizing the biochemistry of DNA Helicase UvrD from </strong><strong><em>Neisseria gonorrhoea&nbsp;</em></strong></li>
-		<li style="text-align:justify"><strong>Description</strong>: UvrD a DNA Helicase from <em>Neisseria gonorrhoeae. </em>It is an important protein that when deleted from the genome, increases the virulence of the pathogen. However, there is not much information on this protein. During my time in the lab, my research involved purifying and characterizing the UvrD DNA Helicase.&nbsp;</li>
-	</ul>
-	</li>
-	<li><strong>Summer Student</strong>
-	<ul>
-		<li><strong>Dr. Vanaja Kumar</strong>, Bacteriology, <strong>National Institute of&nbsp; Research in Tuberculosis, Chennai</strong></li>
-		<li><strong>April 2013 &ndash; June 2013</strong></li>
-		<li style="text-align:justify"><strong>Title</strong>: <strong>Rapid Drug Sensitivity Testing for </strong><strong><em>Mycobacterium tuberculosis</em></strong><strong> using Luciferase Reporter Phages&nbsp;</strong></li>
-		<li style="text-align:justify"><strong>Description</strong>: Tuberculosis is a slow-growing organism that makes traditional drug sensitivity testing (DST) assays more time-consuming. It takes up to a month to use the classical techniques which delay the proper treatment of a patient with TB-like symptoms. Using lysogenic bacteriophages that have Luciferase Reporter genes, DST results can be obtained in as few as two days.</li>
-	</ul>
-	</li>
-</ul>
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
 
-<h2 style="text-align:justify"><strong>Publications</strong></h2>
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</h</style>
+</head>
+<body>
+    <header>
+        <h1>Kesavan Paruthi Subburam</h1>
+        <p>Cell Biology and Biophysics Researcher</p>
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i><a href="mailto:pskeshu@gmail.com">pskeshu@gmail.com</a>
+        </div>
+    </header>
 
-<ol>
-	<li><a href="https://www.molbiolcell.org/doi/abs/10.1091/mbc.E19-08-0417" rel="noopener" target="_blank">Monitoring global changes in chromatin compaction states upon localized DNA damage with tools of fluorescence anisotropy</a><a href="https://scholar.google.com/citations?user=RkV_7foAAAAJ&amp;hl=en" rel="noopener" target="_blank">P. S. Kesavan</a>, Darshika Bohra, Sitara Roy, and Aprotim Mazumder<em>Molecular Biology of the Cell</em> 2020 31:13, 1403-141</li>
-	<li><a href="https://www.jbc.org/article/S0021-9258(20)35434-X/fulltext" rel="noopener" target="_blank">Hematopoietic PBX-interacting protein is a substrate and an inhibitor of the APC/C&ndash;Cdc20 complex and regulates mitosis by stabilizing cyclin B1</a>Saratchandra Singh Khumukcham, Venkata Subramanyam Kumar Samanthapudi, Vasudevarao Penugurti, Anita Kumari, PS Kesavan, Loka Reddy Velatooru, Siva Reddy Kotla, Aprotim Mazumder, Bramanandam Manavathi<em>Journal of Biological Chemistry</em> 2019 294:26, 10236-10252</li>
-</ol>
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Cell biology researcher specializing in advanced microscopy techniques and image analysis. Currently developing innovative approaches in smart microscopy, addressing the multilevel complexities of life sciences research. Expertise in DNA damage responses, open-source software development for high-throughput imaging, and integration of human factors in experimental design. Committed to advancing microscopy frameworks to enhance our understanding of cellular processes.</p>
+    </section>
 
-<h2 style="text-align:justify"><strong>Salient Conclusions from Ph.D. Thesis</strong></h2>
+    <section>
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-title">Wenner-Gren Postdoctoral Fellow</span>
+                <span class="experience-date">2023 - Present</span>
+            </div>
+            <div class="experience-institution">Faculty of Medicine, Lund University, Lund, Sweden</div>
+            <p><em>Supervisor: Prof. Pontus Nordenfelt</em></p>
+            <ul class="achievements">
+                <li>Developing an experimental manual for smart microscopy, addressing the multilevel nature of life and the complexities in microscopic research.</li>
+                <li>Investigating the integration of human factors, sample complexities, and experimental design in microscopy.</li>
+                <li>Exploring innovative approaches to overcome limitations in current microscopy frameworks and automation processes.</li>
+                <li>Collaborating on the creation of holistic approaches for next-generation microscopy techniques.</li>
+            </ul>
+        </div>
 
-<ul>
-	<li>Combined fluorescence anisotropy imaging with laser microirradiation for live and fixed cells in a widefield microscope with custom automated image analysis pipelines.</li>
-	<li>Upon local damage with laser, chromatin is compacted globally over the course of 2 hours, with nodes of repair forming in regions of less compact chromatin.</li>
-	<li>Developed an open-source software architecture for general-purpose high-throughput imaging.</li>
-</ul>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-title">PhD Researcher</span>
+                <span class="experience-date">January 2016 - 2023</span>
+            </div>
+            <div class="experience-institution">Tata Institute of Fundamental Research, Hyderabad, India</div>
+            <p><em>Supervisor: Prof. Aprotim Mazumder</em></p>
+            <ul class="achievements">
+                <li>Developed a novel fluorescence anisotropy imaging approach combined with laser microirradiation for studying DNA damage responses.</li>
+                <li>Discovered global chromatin compaction patterns following localized DNA damage.</li>
+                <li>Created open-source software for high-throughput imaging, enhancing lab efficiency by 30%.</li>
+                <li>Published findings in Molecular Biology of the Cell, advancing understanding of chromatin dynamics in DNA repair.</li>
+            </ul>
+	</div>
 
-<h2 style="text-align:justify"><strong>Open-source software developed</strong></h2>
+    </section>
 
-<ol>
-	<li><a href="https://github.com/pskeshu/fai/" rel="noopener" target="_blank">fai, open source library for single camera fluorescence anisotropy imaging analysis</a></li>
-	<li><a href="https://github.com/ndsystems/deepthought/" rel="noopener" target="_blank">deepthought, open source library for generic online experiment</a></li>
-	<li><a href="https://github.com/ndsystems/hard-link/" rel="noopener" target="_blank">hard-link, open source library for networking microscopes&nbsp;</a></li>
-	<li><a href="https://github.com/pskeshu/microscoper/" rel="noopener" target="_blank">microscoper, open source library for data management from Olympus IX83 microscope&nbsp;</a></li>
-	<li><a href="https://github.com/pskeshu/doodle/" rel="noopener" target="_blank">doodle, open source library for manual segmentation of images</a></li>
-	<li><a href="https://github.com/CellProfiler/python-bioformats/pull/58" rel="noopener" target="_blank">Metadata parsing from bioformats</a></li>
-</ol>
+    <section>
+        <h2>Education</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-title">Ph.D., Cell Biology and Biophysics</span>
+                <span class="experience-date">2015 - 2023</span>
+            </div>
+            <div class="experience-institution">Tata Institute of Fundamental Research, Hyderabad</div>
+            <p>Thesis: Microscopy and image analysis based enhancements for investigating DNA damage responses in cells</p>
+        </div>
 
-<h2 style="text-align:justify"><strong>Other Interests</strong></h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-title">B. Tech in Biotechnology</span>
+                <span class="experience-date">2011 - 2015</span>
+            </div>
+            <div class="experience-institution">Karunya University, Coimbatore</div>
+            <p>CGPA: 7.7 / 10.0</p>
+        </div>
+    </section>
 
-<ul>
-	<li><strong>Teaching - </strong>I have volunteered as a teacher for 9th-12th grade science in the government schools in Hyderabad headed by Prof. Jayashree Ramadas in the period of 2017-19.</li>
-</ul>
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li class="skills-category">
+                <h3>Experimental Biology</h3>
+                <ul class="subskills">
+                    <li>Cell culture</li>
+                    <li>Genome manipulation</li>
+                    <li>Microscopy</li>
+                    <li>Optics assembly/disassembly</li>
+                    <li>Control system programming</li>
+                </ul>
+            </li>
+            <li class="skills-category">
+                <h3>Programming & Software Development</h3>
+                <ul class="subskills">
+                    <li>Python</li>
+                    <li>MATLAB</li>
+                    <li>R</li>
+                    <li>Open-source library development</li>
+                    <li>Automation</li>
+                </ul>
+            </li>
+            <li class="skills-category">
+                <h3>Data Analysis</h3>
+                <ul class="subskills">
+                    <li>Image processing</li>
+                    <li>Statistical analysis</li>
+                </ul>
+            </li>
+            <li class="skills-category">
+                <h3>Systems Administration</h3>
+                <ul class="subskills">
+                    <li>Linux</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
 
-<ul>
-	<li><strong>Endurance running, music, chess, badminton, culture, history, food</strong></li>
-</ul>
+    <section>
+        <h2>Open Source Software Developed</h2>
+        <ul class="achievements">
+            <li><a href="https://github.com/pskeshu/fai/">fai</a>: Open source library for single camera fluorescence anisotropy imaging analysis</li>
+            <li><a href="https://github.com/ndsystems/deepthought/">deepthought</a>: Open source library for generic online experiment</li>
+            <li><a href="https://github.com/ndsystems/hard-link/">hard-link</a>: Open source library for networking microscopes</li>
+            <li><a href="https://github.com/pskeshu/microscoper/">microscoper</a>: Open source library for data management from Olympus IX83 microscope</li>
+            <li><a href="https://github.com/pskeshu/doodle/">doodle</a>: Open source library for manual segmentation of images</li>
+            <li><a href="https://github.com/CellProfiler/python-bioformats/pull/58">Metadata parsing from bioformats</a>: Contribution to python-bioformats library</li>
+        </ul>
+    </section>
 
-<h2 style="text-align:justify"><strong>Fellowships</strong></h2>
+    <section>
+        <h2>Publications</h2>
+        <ul class="achievements">
+            <li>Khumukcham, S. S., et al. (2023). HPIP and RUFY3 are noncanonical guanine nucleotide exchange factors of Rab5 to regulate endocytosis-coupled focal adhesion turnover. Journal of Biological Chemistry, 299(11). DOI: 10.1016/j.jbc.2023.105128</li>
+            <li>Kesavan, P. S., et al. (2020). Monitoring global changes in chromatin compaction states upon localized DNA damage with tools of fluorescence anisotropy. Molecular Biology of the Cell, 31(13), 1403-1413. DOI: 10.1091/mbc.E19-08-0447</li>
+            <li>Khumukcham, S. S., et al. (2019). Hematopoietic PBX-interacting protein is a substrate and an inhibitor of the APC/C--Cdc20 complex and regulates mitosis by stabilizing cyclin B1. Journal of Biological Chemistry, 294(26), 10236-10252. DOI: 10.1074/jbc.RA118.006576</li>
+        </ul>
+    </section>
 
-<ul>
-	<li>Wenner-Gren postdoctoral fellowship</li>
-	<li>PhD research fellowship from TIFR-DAE</li>
-	<li>Qualified Graduate Aptitude Test for Engineering, 2015&nbsp;</li>
-</ul>
+    <section>
+        <h2>Awards and Fellowships</h2>
+        <ul class="achievements">
+            <li>Wenner-Gren Postdoctoral fellowship</li>
+            <li>PhD research fellowship from TIFR-DAE</li>
+            <li>Qualified Graduate Aptitude Test for Engineering, 2015</li>
+        </ul>
+    </section>
 
-<h2 style="text-align:justify"><strong>Expertise</strong></h2>
+    <section>
+        <h2>Conferences and Presentations</h2>
+        <ul class="achievements">
+            <li>Oral presentation at Biology Across Scales, IGC, Lisbon (March 2024)</li>
+            <li>Attended Future Imaging, Montpellier, France (2023)</li>
+            <li>Poster presentation at HySci (2022)</li>
+            <li>Oral short talk at TIFR Hyderabad</li>
+            <li>Poster presentation at Optics Within Life Science (OWLS-2016) conference, TIFR, Mumbai</li>
+        </ul>
+    </section>
 
-<ul>
-	<li>Experimental Biology
-	<ul>
-		<li>Cell culture</li>
-		<li>Genome manipulation</li>
-		<li>Microscopy</li>
-	</ul>
-	</li>
-	<li>Programming
-	<ul>
-		<li>Automation</li>
-		<li>Control systems</li>
-		<li>Image analysis</li>
-		<li>Data visualization</li>
-		<li>Systems and architecture design</li>
-	</ul>
-	</li>
-	<li>Administration
-	<ul>
-		<li>Linux System Administrator in TIFR Hyderabad.</li>
-	</ul>
-	</li>
-</ul>
+    <section>
+        <h2>Additional Activities</h2>
+        <ul class="achievements">
+            <li>Volunteered as a science teacher for 9th-12th grade in government schools, Hyderabad (2017-2019)</li>
+            <li>Graduated from the Bangalore Microscopy Course, NCBS, Bangalore (2017)</li>
+            <li>Volunteered in Fluorescence Correlation Spectroscopy workshop, TIFR, Hyderabad (2019)</li>
+        </ul>
+    </section>
 
-<ul>
-	<li>Microscopy
-	<ul>
-		<li>Fluorescence Anisotropy Imaging</li>
-		<li>Oblique-Plane Microscope (OPM) with automated fluidics</li>
-	</ul>
-	</li>
-</ul>
-
-<h2 style="text-align:justify"><strong>Conferences, Workshops, and Courses Attended</strong></h2>
-
-<ul>
-	<li>Presented poster at HySci 2022</li>
-	<li>Oral short talk at TIFR Hyderabad</li>
-	<li>Volunteered in Fluorescence Correlation Spectroscopy 2019 at TIFR, Hyderabad.</li>
-	<li>Graduated from the Bangalore Microscopy Course 2017 at NCBS, Bangalore.</li>
-	<li>Presented poster at the Optics Within Life Science (OWLS-2016) conference at TIFR, Mumbai.</li>
-	<li>Volunteered as a teacher in a workshop on Foldscope (December 2016) at Delhi University.</li>
-</ul>
+    <section>
+        <h2>Interests</h2>
+        <p>Vipassana meditation, Endurance running, Music, Chess</p>
+    </section>
+</body>
+</html>
