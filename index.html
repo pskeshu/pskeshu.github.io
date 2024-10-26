@@ -6,7 +6,10 @@
     <title>Kesavan PS - Phenomenologist</title>
     <style>
         :root {
-            --text-color: #2c3e50;
+            --primary-color: #2c3e50;      /* Deep blue-gray for main text */
+            --header-bg: #34495e;          /* Slightly lighter blue-gray for header */
+            --header-text: #ecf0f1;        /* Light gray-blue for header text */
+            --header-hover: #3498db;       /* Bright blue for hover states */
             --light-text: #666;
             --bg-color: #ffffff;
         }
@@ -19,7 +22,7 @@
 
         body {
             font-family: 'Times New Roman', Times, serif;
-            color: var(--text-color);
+            color: var(--primary-color);
             line-height: 1.6;
             background: var(--bg-color);
             min-height: 100vh;
@@ -27,14 +30,15 @@
 
         header {
             padding: 0.5rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 2px solid var(--header-hover);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: var(--bg-color);
+            background: var(--header-bg);
             z-index: 1000;
-            transition: transform 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         header.hide {
@@ -50,20 +54,38 @@
         }
 
         nav a {
-            color: var(--text-color);
+            color: var(--header-text);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-size: 1.1rem;
             padding: 1rem 1.5rem;
             display: block;
             width: 33.33%;
             text-align: center;
+            position: relative;
         }
 
         nav a:hover {
-            color: var(--light-text);
+            color: var(--header-hover);
         }
 
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--header-hover);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 70%;
+        }
+
+        /* Rest of your CSS remains the same */
         .content {
             margin-top: 100px;
             padding: 2rem;
@@ -86,7 +108,7 @@
         h2 {
             font-size: 1.5rem;
             font-weight: normal;
-            color: var(--text-color);
+            color: var(--primary-color);
             margin-bottom: 3rem;
         }
 
@@ -98,7 +120,7 @@
         .goals h3 {
             font-size: 1.3rem;
             font-weight: normal;
-            color: var(--text-color);
+            color: var(--primary-color);
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -139,7 +161,7 @@
 
         @media (hover: none) {
             nav a:active {
-                background-color: rgba(0,0,0,0.05);
+                background-color: rgba(52, 152, 219, 0.1);
             }
         }
     </style>
