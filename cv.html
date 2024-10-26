@@ -7,10 +7,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --link-color: #3498db;
-            --text-color: #333;
-            --border-color: #eee;
+            --primary-color: #34495e;
+            --secondary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --light-text: #666;
+            --border-color: #e1e8ed;
+            --hover-color: #2980b9;
+            --section-bg: #f8fafc;
+            --achievement-border: #edf2f7;
         }
 
         * {
@@ -32,6 +37,10 @@
         header {
             text-align: center;
             margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: var(--section-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         h1 {
@@ -45,7 +54,8 @@
             color: var(--primary-color);
             margin: 2rem 0 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--accent-color);
+            position: relative;
         }
 
         .contact-info {
@@ -54,20 +64,28 @@
 
         .contact-info i {
             margin-right: 0.5rem;
-            color: var(--primary-color);
+            color: var(--accent-color);
         }
 
         a {
-            color: var(--link-color);
+            color: var(--accent-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: var(--hover-color);
         }
 
         .experience-item {
             margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-left: 3px solid var(--border-color);
+            transition: border-left-color 0.3s ease;
+        }
+
+        .experience-item:hover {
+            border-left-color: var(--accent-color);
         }
 
         .experience-header {
@@ -78,20 +96,43 @@
 
         .experience-title {
             font-weight: bold;
+            color: var(--secondary-color);
         }
 
         .experience-date {
-            color: #666;
+            color: var(--light-text);
         }
 
         .experience-institution {
             font-style: italic;
             margin-bottom: 0.5rem;
+            color: var(--secondary-color);
         }
 
         .achievements {
             margin-left: 1.5rem;
             margin-top: 0.5rem;
+            list-style: none;
+        }
+
+        .achievements li {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            position: relative;
+            padding-left: 1.2em;
+        }
+
+        .achievements li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .achievements li:hover {
+            background-color: var(--section-bg);
         }
 
         .skills-list {
@@ -99,12 +140,17 @@
         }
 
         .skills-category {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: var(--section-bg);
+            border-radius: 8px;
         }
 
         .skills-category h3 {
             color: var(--primary-color);
             margin-bottom: 0.5rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .subskills {
@@ -112,9 +158,27 @@
             list-style: none;
         }
 
+        .subskills li {
+            position: relative;
+            padding-left: 1.2em;
+        }
+
         .subskills li::before {
-            content: "–";
-            margin-right: 0.5rem;
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         @media (max-width: 768px) {
@@ -127,7 +191,6 @@
             }
         }
     </style>
-</h</style>
 </head>
 <body>
     <header>
@@ -153,11 +216,11 @@
             <div class="experience-institution">Faculty of Medicine, Lund University, Lund, Sweden</div>
             <p><em>Supervisor: Prof. Pontus Nordenfelt</em></p>
             <ul class="achievements">
-            <li>Pioneering a domain-driven approach to smart microscopy that addresses the fundamental challenge of transforming microscopy images into biological insights through the unified interaction of three key realms: the researcher's expertise, the biological sample's behavior, and the microscope's capabilities.</li>
-            <li>Developing experimental frameworks that bridge the gap between image acquisition and insight generation by harmonizing the unique intelligence of each domain: human intuition in pattern recognition, cellular dynamics in spatiotemporal organization, and microscope automation in data collection.</li>
-            <li>Creating systematic approaches to extract meaningful biological understanding from microscopy data by leveraging the complementary strengths of human interpretation, biological self-organization, and computational analysis.</li>
-            <li>Building an integrated platform where the researcher's cognitive processes, the sample's inherent patterns, and the microscope's analytical capabilities work in concert to reveal deeper insights into biological phenomena.</li>
-	    </ul>
+                <li>Pioneering a domain-driven approach to smart microscopy that addresses the fundamental challenge of transforming microscopy images into biological insights through the unified interaction of three key realms: the researcher's expertise, the biological sample's behavior, and the microscope's capabilities.</li>
+                <li>Developing experimental frameworks that bridge the gap between image acquisition and insight generation by harmonizing the unique intelligence of each domain: human intuition in pattern recognition, cellular dynamics in spatiotemporal organization, and microscope automation in data collection.</li>
+                <li>Creating systematic approaches to extract meaningful biological understanding from microscopy data by leveraging the complementary strengths of human interpretation, biological self-organization, and computational analysis.</li>
+                <li>Building an integrated platform where the researcher's cognitive processes, the sample's inherent patterns, and the microscope's analytical capabilities work in concert to reveal deeper insights into biological phenomena.</li>
+            </ul>
         </div>
 
         <div class="experience-item">
@@ -173,8 +236,7 @@
                 <li>Created open-source software for high-throughput imaging, enhancing lab efficiency by 30%.</li>
                 <li>Published findings in Molecular Biology of the Cell, advancing understanding of chromatin dynamics in DNA repair.</li>
             </ul>
-	</div>
-
+        </div>
     </section>
 
     <section>
