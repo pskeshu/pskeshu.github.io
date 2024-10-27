@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kesavan Paruthi Subburam- Phenomenologist</title>
+    <title>Kesavan Paruthi Subburam - Phenomenologist</title>
     <style>
         :root {
-            --primary-color: #2c3e50;      /* Deep blue-gray for main text */
-            --header-bg: #34495e;          /* Slightly lighter blue-gray for header */
-            --header-text: #ecf0f1;        /* Light gray-blue for header text */
-            --header-hover: #3498db;       /* Bright blue for hover states */
+            --primary-color: #2c3e50;
+            --header-bg: #34495e;
+            --header-text: #ecf0f1;
+            --header-hover: #3498db;
             --light-text: #666;
             --bg-color: #ffffff;
         }
@@ -85,7 +85,6 @@
             width: 70%;
         }
 
-        /* Rest of your CSS remains the same */
         .content {
             margin-top: 100px;
             padding: 2rem;
@@ -95,14 +94,31 @@
             text-align: center;
         }
 
-        h1 {
+        .name-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .publication-name {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .publication-name strong {
             font-weight: normal;
         }
 
-        h1 strong {
-            font-weight: bold;
+        .publication-name .surname {
+            font-variant: small-caps;
+            letter-spacing: 0.1em;
+        }
+
+        .full-name {
+            font-size: 1.5rem;
+            color: var(--light-text);
+            font-weight: normal;
+            margin-top: 0.5rem;
         }
 
         h2 {
@@ -157,6 +173,14 @@
                 font-size: 1rem;
                 padding: 0 1rem;
             }
+
+            .publication-name {
+                font-size: 2rem;
+            }
+
+            .full-name {
+                font-size: 1.3rem;
+            }
         }
 
         @media (hover: none) {
@@ -176,7 +200,12 @@
     </header>
 
     <main class="content">
-        <h1><strong>Kesavan PS</strong></h1>
+        <div class="name-container">
+            <h1 class="publication-name">
+                Kesavan <span class="surname">PS</span>
+            </h1>
+            <div class="full-name">Kesavan Paruthi Subburam</div>
+        </div>
         <h2>Phenomenologist</h2>
 
         <section class="goals">
@@ -202,10 +231,8 @@
             }
             
             if (currentScroll > lastScroll && !header.classList.contains('hide')) {
-                // Scrolling down
                 header.classList.add('hide');
             } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
-                // Scrolling up
                 header.classList.remove('hide');
             }
             
