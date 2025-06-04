@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poems - Kesavan PS</title>
+    <title>Poems - P. S. Kesavan</title>
     <style>
         :root {
-            --text-color: #2c3e50;
-            --link-color: #34495e;
-            --hover-color: #3498db;
-            --bg-color: #ffffff;
+            --primary-color: #2c3e50;
+            --header-bg: #34495e;
+            --header-text: #ecf0f1;
+            --header-hover: #3498db;
             --light-text: #666;
+            --bg-color: #ffffff;
             --date-color: #888;
         }
 
@@ -21,29 +22,85 @@
         }
 
         body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Crimson Text', 'Garamond', 'Times New Roman', serif;
+            color: var(--primary-color);
             line-height: 1.6;
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            background: var(--bg-color);
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 0.5rem;
+            border-bottom: 2px solid var(--header-hover);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--header-bg);
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header.hide {
+            transform: translateY(-100%);
         }
 
         nav {
-            text-align: center;
-            margin-bottom: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
 
         nav a {
-            color: var(--link-color);
+            color: var(--header-text);
             text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            padding: 1rem 1.5rem;
+            display: block;
+            width: 25%;
+            text-align: center;
+            position: relative;
         }
 
         nav a:hover {
-            color: var(--hover-color);
+            color: var(--header-hover);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--header-hover);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 70%;
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary-color);
+            letter-spacing: 0.02em;
         }
 
         .poem {
@@ -55,13 +112,14 @@
             font-size: 1.5rem;
             font-weight: normal;
             margin-bottom: 1.5rem;
-            color: var(--text-color);
+            color: var(--primary-color);
         }
 
         .poem-text {
             margin-bottom: 1.5rem;
             line-height: 1.8;
             font-size: 1.1rem;
+            color: var(--primary-color);
         }
 
         .separator {
@@ -83,99 +141,150 @@
             margin-top: 1rem;
         }
 
-        @media (max-width: 480px) {
-            body {
+        @media (max-width: 600px) {
+            nav a {
+                font-size: 1rem;
+                padding: 1.2rem 0.3rem;
+            }
+            
+            nav {
+                justify-content: space-between;
+            }
+            
+            .content {
+                margin-top: 80px;
                 padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
             }
 
             .poem {
                 padding: 0;
             }
         }
+
+        @media (hover: none) {
+            nav a:active {
+                background-color: rgba(52, 152, 219, 0.1);
+            }
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">← back</a>
-    </nav>
+    <header>
+        <nav>
+            <a href="about.html">about</a>
+            <a href="cv.html">cv</a>
+            <a href="software.html">software</a>
+            <a href="poems.html">poems</a>
+        </nav>
+    </header>
 
-    <article class="poem">
-        <h2>1. In search of</h2>
-        <div class="poem-text">
-            In the race to make things,<br>
-            made many have we;<br>
-            what use is a few,<br>
-            when there is plenty.<br><br>
+    <main class="content">
+        <h1>Poems</h1>
 
-            Context matters always,<br>
-            unsure are the ways;<br>
-            what we have, we don't understand,<br>
-            run around in circles do we.<br><br>
+        <article class="poem">
+            <h2>1. In search of</h2>
+            <div class="poem-text">
+                In the race to make things,<br>
+                made many have we;<br>
+                what use is a few,<br>
+                when there is plenty.<br><br>
 
-            Where do we go from here,<br>
-            and where do we come from?<br>
-            You're looking here and there,<br>
-            yet what you seek is within you,<br><br>
+                Context matters always,<br>
+                unsure are the ways;<br>
+                what we have, we don't understand,<br>
+                run around in circles do we.<br><br>
 
-            says the hippie.
-        </div>
-        <div class="separator">--</div>
-        <div class="date">28 Aug 2023</div>
-        <div class="context">
-            A poem I wrote with the raw emotions of working on a new project.
-        </div>
-    </article>
+                Where do we go from here,<br>
+                and where do we come from?<br>
+                You're looking here and there,<br>
+                yet what you seek is within you,<br><br>
 
-    <article class="poem">
-        <h2>2. fruitless existence</h2>
-        <div class="poem-text">
-            A tree starts as a seed,<br>
-            grows into a plant,<br>
-            twists and twirls<br>
-            to find the sun.<br><br>
+                says the hippie.
+            </div>
+            <div class="separator">--</div>
+            <div class="date">28 Aug 2023</div>
+            <div class="context">
+                A poem I wrote with the raw emotions of working on a new project.
+            </div>
+        </article>
 
-            Until one day,<br>
-            the tree asks self,<br>
-            why do I exist, if<br>
-            I cannot even run.<br><br>
+        <article class="poem">
+            <h2>2. fruitless existence</h2>
+            <div class="poem-text">
+                A tree starts as a seed,<br>
+                grows into a plant,<br>
+                twists and twirls<br>
+                to find the sun.<br><br>
 
-            Passersby listened to the worries<br>
-            felt sad, and gave a shoulder to cry.<br>
-            Oh giant tree, you must exist,<br>
-            for you provide shade in the sun.<br><br>
+                Until one day,<br>
+                the tree asks self,<br>
+                why do I exist, if<br>
+                I cannot even run.<br><br>
 
-            Unconvinced, the tree asked,<br>
-            what use of I, if<br>
-            fruits are not bourn by me.
-        </div>
-        <div class="separator">--</div>
-        <div class="date">09 Sep 2023</div>
-        <div class="context">
-            A poem I wrote keeping in mind the sense of fruitless existence coming out of the existential crisis in research.
-        </div>
-    </article>
+                Passersby listened to the worries<br>
+                felt sad, and gave a shoulder to cry.<br>
+                Oh giant tree, you must exist,<br>
+                for you provide shade in the sun.<br><br>
 
-    <article class="poem">
-        <h2>3. I refuse</h2>
-        <div class="poem-text">
-            Despite all the trials,<br>
-            tribulations and temptations<br>
-            I refuse to die.<br>
-            To die is to say,<br>
-            there is no hope.<br>
-            And to say there is no hope,<br>
-            Is an insult to god.<br>
-            Not to the god of the gaps,<br>
-            But That that keeps the world going.<br>
-            That that sparks life. The Chance.<br>
-            That Encounter. That Miracle.<br>
-            Of Life.
-        </div>
-        <div class="separator">--</div>
-        <div class="date">27 Sep 2024</div>
-        <div class="context">
-            Despite many unanswered emails, polite rejections, and suggestions to quit academia, I feel a fighting spirit. I felt the same this morning, and wrote down what came to my mind.
-        </div>
-    </article>
+                Unconvinced, the tree asked,<br>
+                what use of I, if<br>
+                fruits are not bourn by me.
+            </div>
+            <div class="separator">--</div>
+            <div class="date">09 Sep 2023</div>
+            <div class="context">
+                A poem I wrote keeping in mind the sense of fruitless existence coming out of the existential crisis in research.
+            </div>
+        </article>
+
+        <article class="poem">
+            <h2>3. I refuse</h2>
+            <div class="poem-text">
+                Despite all the trials,<br>
+                tribulations and temptations<br>
+                I refuse to die.<br>
+                To die is to say,<br>
+                there is no hope.<br>
+                And to say there is no hope,<br>
+                Is an insult to god.<br>
+                Not to the god of the gaps,<br>
+                But That that keeps the world going.<br>
+                That that sparks life. The Chance.<br>
+                That Encounter. That Miracle.<br>
+                Of Life.
+            </div>
+            <div class="separator">--</div>
+            <div class="date">27 Sep 2024</div>
+            <div class="context">
+                Despite many unanswered emails, polite rejections, and suggestions to quit academia, I feel a fighting spirit. I felt the same this morning, and wrote down what came to my mind.
+            </div>
+        </article>
+    </main>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+                header.classList.add('hide');
+            } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+                header.classList.remove('hide');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 </html>
