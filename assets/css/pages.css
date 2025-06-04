@@ -186,23 +186,62 @@
 
 @media (max-width: 600px) {
     .content {
-        padding: 0.7rem 0.2rem 1.2rem 0.2rem;
-        margin-top: 50px;
+        padding: 1rem 1rem 1.5rem 1rem;
+        margin-top: 60px;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+        border-radius: 12px;
     }
-    .cv-section h2 {
-        font-size: 1.05rem;
-        padding: 0.2em 0.4em;
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
     }
-    .cv-item, .education-item, .experience-item {
-        padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
     }
+
+    .expertise {
+        font-size: 1rem;
+        margin-bottom: 1.8rem;
+        line-height: 1.5;
+    }
+
     .goals {
-        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-        margin-top: 0.7rem;
+        padding: 1rem 1rem 1.5rem 1rem;
+        margin-top: 1rem;
         border-left: 4px solid var(--accent-color);
     }
+
     .goals h3 {
-        font-size: 1.08rem;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .goals li {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
+        padding: 0;
+    }
+
+    .cv-section h2 {
+        font-size: 1.1rem;
+        padding: 0.3em 0.6em;
+    }
+
+    .cv-item, .education-item, .experience-item {
+        padding: 1rem 0.8rem 0.8rem 0.8rem;
+    }
+
+    .software-entry, .contribution-item {
+        padding: 1rem 0.8rem;
+    }
+
+    .entry-links {
+        gap: 0.8rem;
     }
 }
 
