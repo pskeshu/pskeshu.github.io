@@ -15,6 +15,10 @@ const profileLinks = [
     {
         name: 'GitHub',
         href: 'https://github.com/pskeshu/',
+    },
+    {
+        name: 'Substack',
+        href: 'https://pskeshu.substack.com',
     }
 ];
 
