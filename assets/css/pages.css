@@ -359,4 +359,20 @@ a, .source-link, .paper-link, .additional-info a {
 a:hover, .source-link:hover, .paper-link:hover, .additional-info a:hover {
     text-decoration: underline !important;
     border-bottom: none !important;
+}
+
+.pull-request-link {
+    color: #fff !important;
+    background: linear-gradient(90deg, #4a6fa5 60%, #1a3a7a 100%) !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    padding: 0.1em 0.4em !important;
+    box-shadow: 0 2px 8px rgba(74,111,165,0.10) !important;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.pull-request-link:hover, .pull-request-link:focus {
+    color: #fff !important;
+    background: linear-gradient(90deg, #1a3a7a 60%, #4a6fa5 100%) !important;
+    text-decoration: underline !important;
+    box-shadow: 0 4px 16px rgba(34,48,74,0.13) !important;
 } 
