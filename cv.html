@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kesavan Paruthi Subburam - CV</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>P. S. Kesavan - CV</title>
     <style>
         :root {
-            --primary-color: #34495e;
-            --secondary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #2c3e50;
+            --primary-color: #2c3e50;
+            --header-bg: #34495e;
+            --header-text: #ecf0f1;
+            --header-hover: #3498db;
             --light-text: #666;
-            --border-color: #e1e8ed;
+            --bg-color: #ffffff;
+            --link-color: #3498db;
             --hover-color: #2980b9;
-            --section-bg: #f8fafc;
-            --achievement-border: #edf2f7;
         }
 
         * {
@@ -25,333 +23,530 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Crimson Text', 'Garamond', 'Times New Roman', serif;
+            color: var(--primary-color);
             line-height: 1.6;
-            color: var(--text-color);
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #fff;
+            background: var(--bg-color);
+            min-height: 100vh;
         }
 
         header {
+            padding: 0.5rem;
+            border-bottom: 2px solid var(--header-hover);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--header-bg);
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header.hide {
+            transform: translateY(-100%);
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--header-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            padding: 1rem 1.5rem;
+            display: block;
+            width: 25%;
             text-align: center;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            background-color: var(--section-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent-color);
             position: relative;
+        }
+
+        nav a:hover {
+            color: var(--header-hover);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--header-hover);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 70%;
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        .cv-header h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .cv-header .subtitle {
+            font-size: 1.3rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
         }
 
         .contact-info {
-            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: var(--light-text);
+            font-size: 1.1rem;
         }
 
-        .contact-info i {
-            margin-right: 0.5rem;
-            color: var(--accent-color);
-        }
-
-        a {
-            color: var(--accent-color);
+        .contact-info a {
+            color: var(--link-color);
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
-        a:hover {
+        .contact-info a:hover {
             color: var(--hover-color);
         }
 
-        .experience-item {
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
             margin-bottom: 1.5rem;
-            padding: 1rem;
-            border-left: 3px solid var(--border-color);
-            transition: border-left-color 0.3s ease;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--header-hover);
+            padding-bottom: 0.5rem;
         }
 
-        .experience-item:hover {
-            border-left-color: var(--accent-color);
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-left: 3px solid var(--header-hover);
+            background: #fafafa;
         }
 
-        .experience-header {
+        .item-header {
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 0.5rem;
+            flex-wrap: wrap;
         }
 
-        .experience-title {
-            font-weight: bold;
-            color: var(--secondary-color);
+        .item-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
         }
 
-        .experience-date {
+        .item-date {
             color: var(--light-text);
-        }
-
-        .experience-institution {
             font-style: italic;
-            margin-bottom: 0.5rem;
-            color: var(--secondary-color);
+            font-size: 1.1rem;
         }
 
-        .achievements {
+        .item-location {
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .supervisor {
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .item-description {
+            color: var(--primary-color);
+            line-height: 1.7;
+        }
+
+        .item-description ul {
             margin-left: 1.5rem;
             margin-top: 0.5rem;
+        }
+
+        .item-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .skill-category ul {
             list-style: none;
         }
 
-        .achievements li {
-            margin-bottom: 0.5rem;
-            padding: 0.5rem;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+        .skill-category li {
+            color: var(--light-text);
+            margin-bottom: 0.3rem;
+            padding-left: 1rem;
             position: relative;
-            padding-left: 1.2em;
         }
 
-        .achievements li::before {
+        .skill-category li::before {
             content: "•";
-            color: var(--accent-color);
+            color: var(--header-hover);
             position: absolute;
             left: 0;
         }
 
-        .achievements li:hover {
-            background-color: var(--section-bg);
+        .publications ol {
+            margin-left: 1.5rem;
         }
 
-        .skills-list {
+        .publications li {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: var(--primary-color);
+        }
+
+        .publications a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .publications a:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        .simple-list {
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        .simple-list ul {
             list-style: none;
+            margin-left: 0;
         }
 
-        .skills-category {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background-color: var(--section-bg);
-            border-radius: 8px;
-        }
-
-        .skills-category h3 {
+        .simple-list li {
             color: var(--primary-color);
             margin-bottom: 0.5rem;
-            padding-bottom: 0.3rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .subskills {
-            margin-left: 1.5rem;
-            list-style: none;
-        }
-
-        .subskills li {
+            padding-left: 1rem;
             position: relative;
-            padding-left: 1.2em;
         }
 
-        .subskills li::before {
+        .simple-list li::before {
             content: "•";
-            color: var(--accent-color);
+            color: var(--header-hover);
             position: absolute;
             left: 0;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 8px;
-            transition: box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         @media (max-width: 768px) {
-            body {
+            .content {
                 padding: 1rem;
             }
 
-            .experience-header {
+            .cv-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                gap: 1rem;
+                font-size: 1rem;
+            }
+
+            .item-header {
                 flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 1.2rem 0.3rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Kesavan Paruthi Subburam</h1>
-        <p>Cell Biology and Biophysics Researcher</p>
-        <div class="contact-info">
-            <i class="fas fa-envelope"></i><a href="mailto:pskeshu@gmail.com">pskeshu@gmail.com</a>
-        </div>
+        <nav>
+            <a href="about.html">about</a>
+            <a href="cv.html">cv</a>
+            <a href="software.html">software</a>
+            <a href="poems.html">poems</a>
+        </nav>
     </header>
 
-    <section>
-        <h2>Professional Summary</h2>
-        <p>Cell biology researcher specializing in advanced microscopy techniques and image analysis. Currently developing innovative approaches in smart microscopy, addressing the multilevel complexities of life sciences research. Expertise in DNA damage responses, open-source software development for high-throughput imaging, and integration of human factors in experimental design. Committed to advancing microscopy frameworks to enhance our understanding of cellular processes.</p>
-    </section>
-
-    <section>
-        <h2>Professional Experience</h2>
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="experience-title">Wenner-Gren Postdoctoral Fellow</span>
-                <span class="experience-date">2023 - Present</span>
+    <main class="content">
+        <div class="cv-header">
+            <h1>P. S. Kesavan</h1>
+            <div class="subtitle">Cell Biologist & Bioimaging Specialist with Expertise in Smart Microscopy Systems</div>
+            <div class="contact-info">
+                <div><a href="mailto:pskeshu@gmail.com">pskeshu@gmail.com</a></div>
             </div>
-            <div class="experience-institution">Faculty of Medicine, Lund University, Lund, Sweden</div>
-            <p><em>Supervisor: Prof. Pontus Nordenfelt</em></p>
-            <ul class="achievements">
-                <li>Pioneering a domain-driven approach to smart microscopy that addresses the fundamental challenge of transforming microscopy images into biological insights through the unified interaction of three key realms: the researcher's expertise, the biological sample's behavior, and the microscope's capabilities.</li>
-                <li>Developing experimental frameworks that bridge the gap between image acquisition and insight generation by harmonizing the unique intelligence of each domain: human intuition in pattern recognition, cellular dynamics in spatiotemporal organization, and microscope automation in data collection.</li>
-                <li>Creating systematic approaches to extract meaningful biological understanding from microscopy data by leveraging the complementary strengths of human interpretation, biological self-organization, and computational analysis.</li>
-                <li>Building an integrated platform where the researcher's cognitive processes, the sample's inherent patterns, and the microscope's analytical capabilities work in concert to reveal deeper insights into biological phenomena.</li>
-            </ul>
         </div>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="experience-title">PhD Researcher</span>
-                <span class="experience-date">January 2016 - 2023</span>
+        <section class="section">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">Ph.D., Cell Biology and Biophysics</div>
+                    <div class="item-date">2015 - 2023</div>
+                </div>
+                <div class="item-location">Tata Institute of Fundamental Research, Hyderabad, India</div>
+                <div class="item-description">
+                    <strong>Thesis:</strong> Microscopy and image analysis based enhancements for investigating DNA damage responses in cells
+                </div>
             </div>
-            <div class="experience-institution">Tata Institute of Fundamental Research, Hyderabad, India</div>
-            <p><em>Supervisor: Prof. Aprotim Mazumder</em></p>
-            <ul class="achievements">
-                <li>Developed a novel fluorescence anisotropy imaging approach combined with laser microirradiation for studying DNA damage responses.</li>
-                <li>Discovered global chromatin compaction patterns following localized DNA damage.</li>
-                <li>Created open-source software for high-throughput imaging, enhancing lab efficiency by 30%.</li>
-                <li>Published findings in Molecular Biology of the Cell, advancing understanding of chromatin dynamics in DNA repair.</li>
-            </ul>
-        </div>
-    </section>
 
-    <section>
-        <h2>Education</h2>
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="experience-title">Ph.D., Cell Biology and Biophysics</span>
-                <span class="experience-date">2015 - 2023</span>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">B. Tech in Biotechnology</div>
+                    <div class="item-date">2011 - 2015</div>
+                </div>
+                <div class="item-location">Karunya University, Coimbatore, India</div>
             </div>
-            <div class="experience-institution">Tata Institute of Fundamental Research, Hyderabad</div>
-            <p>Thesis: Microscopy and image analysis based enhancements for investigating DNA damage responses in cells</p>
-        </div>
+        </section>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="experience-title">B. Tech in Biotechnology</span>
-                <span class="experience-date">2011 - 2015</span>
+        <section class="section">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Wenner-Gren Postdoctoral Fellow</div>
+                    <div class="item-date">January 2023 - December 2024</div>
+                </div>
+                <div class="item-location">Faculty of Medicine, Lund University, Lund, Sweden</div>
+                <div class="supervisor">Supervisor: Prof. Pontus Nordenfelt</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Developed theoretical framework for smart microscopy systems that integrate across experimental contexts</li>
+                        <li>Conceptualized microscopy as collaborative partner in scientific inquiry rather than merely automated tool</li>
+                        <li>Investigated episodic nature of cellular observation and proposed systems to bridge observational gaps</li>
+                        <li>Created roadmap for next-generation microscopy technologies that amplify human capabilities</li>
+                    </ul>
+                </div>
             </div>
-            <div class="experience-institution">Karunya University, Coimbatore</div>
-            <p>CGPA: 7.7 / 10.0</p>
-        </div>
-    </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li class="skills-category">
-                <h3>Experimental Biology</h3>
-                <ul class="subskills">
-                    <li>Cell culture</li>
-                    <li>Genome manipulation</li>
-                    <li>Microscopy</li>
-                    <li>Optics assembly/disassembly</li>
-                    <li>Control system programming</li>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Founder and CEO</div>
+                    <div class="item-date">August 2021 - May 2025</div>
+                </div>
+                <div class="item-location">nDimensional Systems Private Limited, Chennai, India</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Conducted comprehensive market research on microscopy applications across biology and material science laboratories in India, analyzing existing solutions, technology stacks, and commercial considerations</li>
+                        <li>Designed user-centric systems with role-based access (lab head, guest researcher, facility manager), creating detailed user stories emphasizing data security, modularity, and a plugin ecosystem</li>
+                        <li>Developed concept framework for "network microscopy" to enable seamless sample imaging across different modalities from widefield to super-resolution platforms</li>
+                        <li>Formulated approaches for federated learning to leverage data from networked microscopes while maintaining privacy and data sovereignty</li>
+                        <li>Created software architecture designs and planning documents for microscopy systems bridging acquisition, analysis, and data management needs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">PhD Researcher</div>
+                    <div class="item-date">August 2015 - January 2023</div>
+                </div>
+                <div class="item-location">Tata Institute of Fundamental Research, Hyderabad, India</div>
+                <div class="supervisor">Supervisor: Prof. Aprotim Mazumder</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Developed novel fluorescence anisotropy imaging approach combined with laser microirradiation</li>
+                        <li>Discovered distributed repair factor assembly patterns following DNA damage, challenging conventional models</li>
+                        <li>Created "deepthought," an open-source domain-driven design platform for microscope control and experiment automation</li>
+                        <li>Scaled experimental throughput from tens to thousands of cells through innovative system design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Fluorescence Microscopy & Bioimaging</h3>
+                    <ul>
+                        <li><strong>Imaging Techniques:</strong> Fluorescence Anisotropy Imaging, FRAP, FRET, FLIM, FCS</li>
+                        <li><strong>Microscopy Systems:</strong> Confocal, Widefield, STED, SIM</li>
+                        <li><strong>Hardware:</strong> Optical table setup, system alignment, microscope component integration</li>
+                        <li><strong>Applications:</strong> Live-cell imaging, high-content screening, laser microirradiation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Programming & Software Development</h3>
+                    <ul>
+                        <li><strong>Languages:</strong> Python, JavaScript, MATLAB</li>
+                        <li><strong>Microscopy Control:</strong> MicroManager device adapters, hardware interfacing and debugging</li>
+                        <li><strong>System Architecture:</strong> Domain-driven design, distributed systems, web-based interfaces</li>
+                        <li><strong>Image Processing:</strong> Classical algorithms, deep learning approaches (CNNs, U-Net), scikit-image, OpenCV, TensorFlow/PyTorch</li>
+                        <li><strong>Scientific Visualization:</strong> Napari for n-dimensional bioimaging data, matplotlib for publication-quality plots</li>
+                        <li><strong>UI Development:</strong> ReactJS-based web interfaces and PyQt desktop applications</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Biological Applications</h3>
+                    <ul>
+                        <li><strong>Cell Biology:</strong> Mammalian cell culture, transfection, genetic manipulation, cell cycle identification assays</li>
+                        <li><strong>Molecular Techniques:</strong> Single molecule RNA FISH, DNA damage response visualization, immunofluorescence</li>
+                        <li><strong>Experimental Design:</strong> Automated acquisition workflows, high-throughput cellular assays</li>
+                        <li><strong>Process Optimization:</strong> Scientific discovery workflows, experiment planning systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Teaching & Training Experience</h2>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Microscopy Facility Trainer</div>
+                    <div class="item-date">2016 - 2022</div>
+                </div>
+                <div class="item-location">Tata Institute of Fundamental Research, Hyderabad, India</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Trained over 30 PhD students and researchers on advanced microscopy techniques</li>
+                        <li>Developed standardized training protocols for fluorescence microscopy workflows</li>
+                        <li>Provided ongoing technical support and experimental design consultation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Workshop Instructor: Python Programming for Biologists</div>
+                    <div class="item-date">2019</div>
+                </div>
+                <div class="item-location">Tata Institute of Fundamental Research, Hyderabad, India</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Informally organized and led comprehensive programming workshop for researchers</li>
+                        <li>Developed curriculum covering data analysis fundamentals for scientific applications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Student Project Supervision</div>
+                    <div class="item-date">2023</div>
+                </div>
+                <div class="item-location">Lund University, Lund, Sweden</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Guided MSc student in developing deep learning methods for automated cell cycle classification</li>
+                        <li>Mentored Bachelor's student in medicine and physics on modeling DNA damage responses based on experimental imaging data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Professional Development</h2>
+            <div class="simple-list">
+                <ul>
+                    <li>LATSIS Smart Microscopy Conference, EPFL, Lausanne (October 2024)</li>
+                    <li>Future Imaging Conference, Montpellier, France (2023)</li>
+                    <li>Oral presentation at Biology Across Scales, IGC, Lisbon (March 2024)</li>
+                    <li>Bangalore Microscopy Course, NCBS, Bangalore (2017)</li>
+                    <li>Fluorescence Correlation Spectroscopy Workshop, TIFR, Hyderabad (2019)</li>
                 </ul>
-            </li>
-            <li class="skills-category">
-                <h3>Programming & Software Development</h3>
-                <ul class="subskills">
-                    <li>Python</li>
-                    <li>MATLAB</li>
-                    <li>R</li>
-                    <li>Open-source library development</li>
-                    <li>Automation</li>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Awards and Fellowships</h2>
+            <div class="simple-list">
+                <ul>
+                    <li>Wenner-Gren Postdoctoral fellowship</li>
+                    <li>PhD research fellowship from TIFR-DAE</li>
+                    <li>Qualified Graduate Aptitude Test for Engineering, 2015</li>
                 </ul>
-            </li>
-            <li class="skills-category">
-                <h3>Data Analysis</h3>
-                <ul class="subskills">
-                    <li>Image processing</li>
-                    <li>Statistical analysis</li>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Interests</h2>
+            <div class="simple-list">
+                <ul>
+                    <li>Iyengar Yoga, Vipassana meditation, Endurance running, Classical music, Chess</li>
                 </ul>
-            </li>
-            <li class="skills-category">
-                <h3>Systems Administration</h3>
-                <ul class="subskills">
-                    <li>Linux</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+            </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>Open Source Software Developed</h2>
-        <ul class="achievements">
-            <li><a href="https://github.com/pskeshu/fai/">fai</a>: Open source library for single camera fluorescence anisotropy imaging analysis</li>
-            <li><a href="https://github.com/ndsystems/deepthought/">deepthought</a>: Open source library for generic online experiment</li>
-            <li><a href="https://github.com/ndsystems/hard-link/">hard-link</a>: Open source library for networking microscopes</li>
-            <li><a href="https://github.com/pskeshu/microscoper/">microscoper</a>: Open source library for data management from Olympus IX83 microscope</li>
-            <li><a href="https://github.com/pskeshu/doodle/">doodle</a>: Open source library for manual segmentation of images</li>
-            <li><a href="https://github.com/CellProfiler/python-bioformats/pull/58">Metadata parsing from bioformats</a>: Contribution to python-bioformats library</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Publications</h2>
-        <ul class="achievements">
-            <li>Khumukcham, S. S., et al. (2023). HPIP and RUFY3 are noncanonical guanine nucleotide exchange factors of Rab5 to regulate endocytosis-coupled focal adhesion turnover. Journal of Biological Chemistry, 299(11). DOI: 10.1016/j.jbc.2023.105128</li>
-            <li>Kesavan, P. S., et al. (2020). Monitoring global changes in chromatin compaction states upon localized DNA damage with tools of fluorescence anisotropy. Molecular Biology of the Cell, 31(13), 1403-1413. DOI: 10.1091/mbc.E19-08-0447</li>
-            <li>Khumukcham, S. S., et al. (2019). Hematopoietic PBX-interacting protein is a substrate and an inhibitor of the APC/C--Cdc20 complex and regulates mitosis by stabilizing cyclin B1. Journal of Biological Chemistry, 294(26), 10236-10252. DOI: 10.1074/jbc.RA118.006576</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Awards and Fellowships</h2>
-        <ul class="achievements">
-            <li>Wenner-Gren Postdoctoral fellowship</li>
-            <li>PhD research fellowship from TIFR-DAE</li>
-            <li>Qualified Graduate Aptitude Test for Engineering, 2015</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Conferences and Presentations</h2>
-        <ul class="achievements">
-            <li>Oral presentation at Biology Across Scales, IGC, Lisbon (March 2024)</li>
-            <li>Attended Future Imaging, Montpellier, France (2023)</li>
-            <li>Poster presentation at HySci (2022)</li>
-            <li>Oral short talk at TIFR Hyderabad</li>
-            <li>Poster presentation at Optics Within Life Science (OWLS-2016) conference, TIFR, Mumbai</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Additional Activities</h2>
-        <ul class="achievements">
-            <li>Volunteered as a science teacher for 9th-12th grade in government schools, Hyderabad (2017-2019)</li>
-            <li>Graduated from the Bangalore Microscopy Course, NCBS, Bangalore (2017)</li>
-            <li>Volunteered in Fluorescence Correlation Spectroscopy workshop, TIFR, Hyderabad (2019)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Interests</h2>
-        <p>Vipassana meditation, Endurance running, Music, Chess</p>
-    </section>
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+                header.classList.add('hide');
+            } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+                header.classList.remove('hide');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 </html>
