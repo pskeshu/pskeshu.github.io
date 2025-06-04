@@ -256,28 +256,31 @@
 
 .links strong, .paper-links strong {
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: bold;
     margin-right: 0.2em;
+    letter-spacing: 0.01em;
 }
 
-.source-link, .paper-link {
-    color: var(--link-color);
+.source-link, .paper-link, .additional-info a {
+    color: #1a3a7a;
+    font-weight: bold;
     text-decoration: none;
-    font-weight: 500;
-    margin-right: 0.7em;
-    transition: color 0.2s;
+    background: none;
+    border-radius: 3px;
+    padding: 0 0.1em;
+    transition: color 0.2s, background 0.2s;
 }
 
-.source-link:hover, .paper-link:hover {
-    color: var(--accent-color);
+.source-link:hover, .paper-link:hover, .additional-info a:hover {
+    color: #1a3a7a;
+    background: #eaf1fb;
     text-decoration: underline;
+    box-shadow: 0 1px 4px rgba(34,48,74,0.07);
 }
 
 .additional-info {
     font-style: italic;
-    color: #7a8a99;
-    margin-top: 0.2rem;
-    font-size: 0.95rem;
+    color: #6a7a89; /* make 'Adapted into' label less prominent */
 }
 
 @media (max-width: 600px) {
@@ -346,4 +349,14 @@
         padding: 0.7rem 0.5rem 0.5rem 0.5rem;
         gap: 0.3rem;
     }
+}
+
+a, .source-link, .paper-link, .additional-info a {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+a:hover, .source-link:hover, .paper-link:hover, .additional-info a:hover {
+    text-decoration: underline !important;
+    border-bottom: none !important;
 } 
