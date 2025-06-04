@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software - Kesavan PS</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --header-bg: #34495e;
+            --header-text: #ecf0f1;
+            --header-hover: #3498db;
+            --light-text: #666;
+            --bg-color: #ffffff;
+            --link-color: #3498db;
+            --hover-color: #2980b9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', 'Garamond', 'Times New Roman', serif;
+            color: var(--primary-color);
+            line-height: 1.6;
+            background: var(--bg-color);
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 0.5rem;
+            border-bottom: 2px solid var(--header-hover);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--header-bg);
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header.hide {
+            transform: translateY(-100%);
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--header-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            padding: 1rem 1.5rem;
+            display: block;
+            width: 25%;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--header-hover);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--header-hover);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 70%;
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary-color);
+            letter-spacing: 0.02em;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .software-entry {
+            margin-bottom: 2.5rem;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .description {
+            color: var(--light-text);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+
+        .links {
+            margin-bottom: 0.8rem;
+        }
+
+        .source-link {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .source-link:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        .paper-links {
+            margin-top: 0.5rem;
+        }
+
+        .paper-link {
+            color: var(--link-color);
+            text-decoration: none;
+            margin-right: 1rem;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .paper-link:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        .additional-info {
+            color: var(--light-text);
+            font-size: 1rem;
+            font-style: italic;
+            margin-top: 0.3rem;
+        }
+
+        .contributions {
+            margin-top: 3rem;
+        }
+
+        .contribution-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+        }
+
+        .contribution-title {
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .contribution-desc {
+            color: var(--light-text);
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                font-size: 1.2rem;
+                padding: 1.2rem 0.5rem;
+            }
+            
+            nav {
+                justify-content: space-between;
+            }
+            
+            .content {
+                margin-top: 80px;
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .software-entry {
+                padding-left: 0;
+            }
+            
+            .contribution-item {
+                padding-left: 0;
+            }
+        }
+
+        @media (hover: none) {
+            nav a:active {
+                background-color: rgba(52, 152, 219, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="about.html">about</a>
+            <a href="cv.html">cv</a>
+            <a href="poems.html">poems</a>
+            <a href="software.html">software</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>Software</h1>
+
+        <section class="section">
+            <h2>Smart Microscopy</h2>
+
+            <div class="software-entry">
+                <h3>deepthought 2.0</h3>
+                <div class="description">
+                    Enhanced version of the microscopy experiment framework with domain model spanning theory of Observation, Perception, Biology based on the initial work of autotc and brushstrokes
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/ndsystems/deepthought" class="source-link">https://github.com/ndsystems/deepthought</a>
+                </div>
+                <div class="paper-links">
+                    <strong>Papers:</strong> 
+                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
+                    <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997v2" class="paper-link">bioRxiv</a>
+                </div>
+            </div>
+
+            <div class="software-entry">
+                <h3>deepthought 1.0</h3>
+                <div class="description">
+                    Generic online experiment framework for microscopy automation based on bluesky
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/ndsystems/deepthought/tree/v1.0/deepthought" class="source-link">https://github.com/ndsystems/deepthought/tree/v1.0/deepthought</a>
+                </div>
+                <div class="paper-links">
+                    <strong>Paper:</strong> 
+                    <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997v2" class="paper-link">bioRxiv</a>
+                </div>
+            </div>
+
+            <div class="software-entry">
+                <h3>hard-link</h3>
+                <div class="description">
+                    Networking library for remotely connecting and controlling multiple microscopes
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/ndsystems/hard-link" class="source-link">https://github.com/ndsystems/hard-link</a>
+                </div>
+                <div class="paper-links">
+                    <strong>Paper:</strong> 
+                    <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997v2" class="paper-link">bioRxiv</a>
+                </div>
+            </div>
+
+            <div class="software-entry">
+                <h3>deepthought-react</h3>
+                <div class="description">
+                    Experimental React-based web interface for microscope control
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/ndsystems/deepthought-react" class="source-link">https://github.com/ndsystems/deepthought-react</a>
+                </div>
+            </div>
+
+            <div class="software-entry">
+                <h3>autotc</h3>
+                <div class="description">
+                    Digital twin of a working tissue culture facility that models experimental workflows, from frozen vials through flask seeding, media composition, cell culture monitoring, and tracking confluence levels. Provides experiment planning and tracking capabilities for cell culture operations.
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/pskeshu/autotc" class="source-link">https://github.com/pskeshu/autotc</a>
+                </div>
+                <div class="paper-links">
+                    <strong>Background:</strong> 
+                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
+                </div>
+                <div class="additional-info">
+                    Adapted into <a href="https://github.com/ndsystems/deepthought/blob/main/deepthought/biology.py" class="paper-link">deepthought/biology.py</a>
+                </div>
+            </div>
+
+            <div class="software-entry">
+                <h3>brushstrokes</h3>
+                <div class="description">
+                    Post-modern microscope software centered around the sample, implementing perception and observation frameworks for automated microscopy. Provides domain models for perceiving objects from images.
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/pskeshu/brushstrokes" class="source-link">https://github.com/pskeshu/brushstrokes</a>
+                </div>
+                <div class="paper-links">
+                    <strong>Background:</strong> 
+                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
+                </div>
+                <div class="additional-info">
+                    Adapted into <a href="https://github.com/ndsystems/deepthought/blob/main/deepthought/observation.py" class="paper-link">observation.py</a> and <a href="https://github.com/ndsystems/deepthought/blob/main/deepthought/microscopy_loop.py" class="paper-link">microscopy_loop.py</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Image Analysis</h2>
+
+            <div class="software-entry">
+                <h3>fai</h3>
+                <div class="description">
+                    Single camera widefield fluorescence anisotropy imaging analysis library
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/pskeshu/fai" class="source-link">https://github.com/pskeshu/fai</a>
+                </div>
+                <div class="paper-links">
+                    <strong>Paper:</strong> 
+                    <a href="https://www.molbiolcell.org/doi/abs/10.1091/mbc.E19-08-0417" class="paper-link">Molecular Biology of the Cell</a>
+                </div>
+                <div class="additional-info">
+                    Useful for CairnResearch optosplit II modules
+                </div>
+            </div>
+
+            <div class="software-entry">
+                <h3>anton</h3>
+                <div class="description">
+                    Agent-based image analysis and discovery framework. Illustrating how to use VLMs for the purpose of automated discovery and understanding where imaging is a basis of observation.
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/pskeshu/anton" class="source-link">https://github.com/pskeshu/anton</a>
+                </div>
+                <div class="paper-links">
+                    <strong>Background:</strong> 
+                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Utilities</h2>
+
+            <div class="software-entry">
+                <h3>microscoper</h3>
+                <div class="description">
+                    Data management and control library for Olympus IX83 microscope
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/pskeshu/microscoper" class="source-link">https://github.com/pskeshu/microscoper</a>
+                </div>
+            </div>
+
+            <div class="software-entry">
+                <h3>doodle</h3>
+                <div class="description">
+                    Manual segmentation tool for microscopy images
+                </div>
+                <div class="links">
+                    <strong>Source:</strong> <a href="https://github.com/pskeshu/doodle" class="source-link">https://github.com/pskeshu/doodle</a>
+                </div>
+                <div class="additional-info">
+                    Based off <a href="https://github.com/scikit-image/scikit-image/pull/2584" class="paper-link">scikit-image PR #2584</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contributions">
+            <h2>Open Source Contributions</h2>
+
+            <div class="contribution-item">
+                <div class="contribution-title">Scikit-image</div>
+                <div class="contribution-desc">A manual segmentation tool similar to imcrop in MATLAB</div>
+                <div class="links">
+                    <a href="https://github.com/scikit-image/scikit-image/pull/2584" class="source-link">Pull Request #2584</a>
+                </div>
+            </div>
+
+            <div class="contribution-item">
+                <div class="contribution-title">Python-bioformats</div>
+                <div class="contribution-desc">Helped minor Python 2-3 bug fixes in python-bioformats, expanded metadata parsing</div>
+                <div class="links">
+                    <a href="https://github.com/CellProfiler/python-bioformats/pull/58" class="source-link">Pull Request #58</a>
+                </div>
+            </div>
+
+            <div class="contribution-item">
+                <div class="contribution-title">ImSwitch</div>
+                <div class="contribution-desc">Wrote a widget for StateSelector</div>
+                <div class="links">
+                    <a href="https://github.com/ImSwitch/ImSwitch/pull/221" class="source-link">Pull Request #221</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+                header.classList.add('hide');
+            } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+                header.classList.remove('hide');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
