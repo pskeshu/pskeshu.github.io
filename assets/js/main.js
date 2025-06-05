@@ -3,8 +3,7 @@ const navLinks = [
     { name: 'Home', href: 'index.html' },
     { name: 'About', href: 'about.html' },
     { name: 'CV', href: 'cv.html' },
-    { name: 'Software', href: 'software.html' },
-    { name: 'Poems', href: 'poems.html' }
+    { name: 'Software', href: 'software.html' }
 ];
 
 const profileLinks = [
