@@ -1,24 +1,20 @@
 // Inject navigation header
 const navLinks = [
-    { name: 'Home', href: 'index.html' },
-    { name: 'About', href: 'about.html' },
-    { name: 'CV', href: 'cv.html' },
-    { name: 'Software', href: 'software.html' },
-    { name: 'Poems', href: 'poems.html' }
+    { name: 'Home', href: '/index.html' },
+    { name: 'About', href: '/about.html' },
+    { name: 'CV', href: '/cv.html' },
+    { name: 'Software', href: '/software.html' },
+    { name: 'Blog', href: '/blog/' }
 ];
 
 const profileLinks = [
-    {
-        name: 'Google Scholar',
-        href: 'https://scholar.google.com/citations?user=RkV_7foAAAAJ&hl=en',
-    },
     {
         name: 'GitHub',
         href: 'https://github.com/pskeshu/',
     },
     {
-        name: 'Substack',
-        href: 'https://pskeshu.substack.com',
+        name: 'Google Scholar',
+        href: 'https://scholar.google.com/citations?user=RkV_7foAAAAJ&hl=en',
     }
 ];
 
