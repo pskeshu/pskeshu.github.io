@@ -1,0 +1,22 @@
+title: P. S. Kesavan
+description: Fundamental Researcher specializing in Cell Biology, Biophysics, Software for Microscopy, and Image Analysis
+baseurl: ""
+url: "https://pskeshu.github.io"
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+
+exclude:
+  - vendor/
+  - .bundle/
+  - Gemfile
+  - Gemfile.lock
+  - _site/
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
