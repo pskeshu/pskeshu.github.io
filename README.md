@@ -1,40 +1,33 @@
 # pskeshu.github.io
 
-This site is organized for maintainability and ease of updates.
+Personal website with Jekyll-powered blog.
 
-## Structure
+## How to Add a Blog Post
 
-```
-pskeshu.github.io/
-├── assets/
-│   ├── css/
-│   │   ├── main.css          # Global styles (colors, fonts, layout)
-│   │   ├── components.css    # Navigation, header, reusable components
-│   │   └── pages.css         # Page-specific overrides
-│   ├── js/
-│   │   ├── main.js           # Global JavaScript & components
-│   │   └── utils.js          # Utility functions
-│   └── images/               # Site images (if any)
-├── index.html                # Homepage
-├── about.html                # About page
-├── cv.html                   # CV page  
-├── software.html             # Software page
-├── poems.html                # Poems page
-├── README.md
-└── .nojekyll                 # Bypass Jekyll processing
-```
+1. **Create the post file** in the `_posts/` directory with this naming format:
+   ```
+   YYYY-MM-DD-N_short-title.md
+   ```
+   Example: `_posts/2025-06-09-1_cell-biology.md`
 
-## Maintenance
-- **Styles:** Edit CSS in `assets/css/` for global or page-specific changes.
-- **Navigation/Header:** Update navigation in `assets/js/main.js` (single source of truth).
-- **Scripts:** Place shared JS in `assets/js/`.
-- **Images:** Store images in `assets/images/`.
+2. **Add front matter** at the top of your file:
+   ```yaml
+   ---
+   layout: post
+   title: "Your Post Title Here"
+   date: 2025-06-09 10:00:00 +0000
+   ---
+   ```
 
-## How to Add a New Page
-1. Create a new HTML file.
-2. Add a link in the navigation array in `assets/js/main.js`.
-3. Add any page-specific styles to `assets/css/pages.css` if needed.
+3. **Write your content** below the front matter using Markdown.
 
----
+4. **Save and commit** your changes - the post will automatically appear on the blog.
 
-This structure ensures easy updates and a professional workflow. 
+## URLs
+- Your post will be accessible at: `/blog/N_short-title/`
+- All posts are listed at: `/blog/`
+
+## Notes
+- Use today's date or earlier (Jekyll won't show future-dated posts)
+- Quote your title if it contains colons or special characters
+- The numbering system (1_, 2_, 3_) keeps posts organized chronologically
