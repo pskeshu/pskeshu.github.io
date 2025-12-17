@@ -4,8 +4,6 @@ title: "Mapping the Conceptual Landscape: Why Definitional Space Matters for Aut
 date: 2025-06-09 10:00:00 +0000
 ---
 
-# Mapping the Conceptual Landscape: Why Definitional Space Matters for Automated Cell Biology
-
 ## Brief context
 This is a commentary on the paper I stumbled across in the QBio topic on arXiv. It was the only article there when I checked, and addresses one of the central problems in automating cell biology. 
 
