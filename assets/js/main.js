@@ -1,10 +1,10 @@
 // Simple navigation header
 const navLinks = [
-    { name: 'Home', href: 'index.html' },
-    { name: 'About', href: 'about.html' },
-    { name: 'Work', href: 'work.html' },
-    { name: 'Software', href: 'software.html' },
-    { name: 'Blog', href: 'blog/' }
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about.html' },
+    { name: 'Work', href: '/work.html' },
+    { name: 'Software', href: '/software.html' },
+    { name: 'Blog', href: '/blog/' }
 ];
 
 const profileLinks = [
@@ -14,10 +14,10 @@ const profileLinks = [
 
 function isCurrentPage(href) {
     const path = window.location.pathname;
-    const page = href.replace('.html', '');
-    if (page === 'index') {
-        return path === '/' || path.endsWith('index.html') || path.endsWith('/');
+    if (href === '/') {
+        return path === '/' || path === '/index.html';
     }
+    const page = href.replace('.html', '').replace(/^\//, '');
     return path.includes(page);
 }
 
