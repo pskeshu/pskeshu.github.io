@@ -4,7 +4,7 @@ const navLinks = [
     { name: 'About', href: 'about.html' },
     { name: 'Work', href: 'work.html' },
     { name: 'Software', href: 'software.html' },
-    { name: 'Blog', href: 'blog.html' }
+    { name: 'Blog', href: 'blog/' }
 ];
 
 const profileLinks = [
