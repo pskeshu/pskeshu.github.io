@@ -3,23 +3,17 @@ layout: default
 title: Blog
 ---
 
-<div class="blog-index">
-    <h1>Automating Cell Biology</h1>
-    
-    <div class="posts">
-        {% for post in site.posts %}
-            <div class="post-link" style="margin: 1.5rem 0; padding: 1rem; border-left: 3px solid #007acc; background: #f9f9f9;">
-                <h3 style="margin: 0;">
-                    <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a>
-                </h3>
-                <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">
-                    {{ post.date | date: "%B %d, %Y" }}
-                </p>
-            </div>
-        {% endfor %}
-    </div>
-    
-    {% if site.posts.size == 0 %}
-        <p>No posts yet. Check back soon!</p>
-    {% endif %}
+<h1>Automating Cell Biology</h1>
+
+<div class="posts">
+    {% for post in site.posts %}
+        <article class="blog-post-item">
+            <div class="blog-post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+            <h2 class="blog-post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        </article>
+    {% endfor %}
 </div>
+
+{% if site.posts.size == 0 %}
+    <p class="text-muted">No posts yet. Check back soon!</p>
+{% endif %}

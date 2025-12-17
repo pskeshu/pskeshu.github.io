@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - P.S. Kesavan</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main class="content">
+        <h1>Work</h1>
+        <p class="work-intro">The arc of my work traces a path from studying cells to building the tools to observe them, and finally to asking what it means for machines to understand life.</p>
+
+        <section class="phase">
+            <h2>Seeing Cells Repair Themselves</h2>
+            <p class="phase-period">2015-2019 &middot; TIFR Hyderabad</p>
+
+            <p>I began with a question: how do cells organize the repair of their damaged DNA? To answer it, I needed to see things conventional microscopy couldn't show me.</p>
+
+            <p>Working with Prof. Aprotim Mazumder, I developed a widefield fluorescence anisotropy imaging approach combined with laser microirradiation. Using off-the-shelf components, we built a system that could monitor chromatin compaction states in living cells. The work revealed distributed repair factor assembly patterns following DNA damage, challenging conventional models of localized repair foci.</p>
+
+            <figure class="work-figure">
+                <img src="assets/images/multipanel_visualization.gif" alt="PCNA chromobody in HeLa cells showing distal foci formation after DNA damage">
+                <figcaption>PCNA chromobody in HeLa cells microirradiated with 405nm laser post Hoechst sensitization. After local damage, PCNA droplets appear globally&mdash;distal foci where repair happens.</figcaption>
+            </figure>
+
+            <p>This phase taught me that answering biological questions often requires building new instruments. The software I wrote out of necessity became tools others could use:</p>
+
+            <ul class="phase-software">
+                <li><strong>fai</strong> &mdash; analysis library for single-camera fluorescence anisotropy imaging</li>
+                <li><strong>microscoper</strong> &mdash; data management for Olympus IX83 microscopes</li>
+                <li><strong>doodle</strong> &mdash; interactive image cropping (later contributed to scikit-image)</li>
+            </ul>
+
+            <p class="phase-outcome"><strong>Publication:</strong> Kesavan et al., <em>Molecular Biology of the Cell</em> 31:1403-1413 (2020)</p>
+        </section>
+
+        <section class="phase">
+            <h2>Learning the Landscape</h2>
+            <p class="phase-period">2017-2019</p>
+
+            <p>The Bangalore Microscopy Course at NCBS opened my eyes to what was possible. Conferences like the FCS Workshop and OWLS introduced me to communities pushing the boundaries of what microscopes could do. I began collaborating with other biologists, contributing microscopy expertise to studies on focal adhesion dynamics and cell cycle regulation.</p>
+
+            <p>Teaching became another form of learning. Training over 30 PhD students on advanced microscopy techniques at TIFR, and organizing a Python programming workshop for biologists, I saw the same patterns repeat: researchers spending enormous effort on problems that better tools could solve.</p>
+
+            <p>This exposure&mdash;combining cell biology perspective, microscopy development experience, and software skills&mdash;led naturally to the next question: could I build systems that solved these problems at scale?</p>
+        </section>
+
+        <section class="phase">
+            <h2>From User to Builder</h2>
+            <p class="phase-period">2019-2023 &middot; TIFR Hyderabad & nDimensional Systems</p>
+
+            <p>The pivot came gradually. I found myself spending more time writing software than running experiments. The question shifted from "what can I discover?" to "what can I build that helps others discover?"</p>
+
+            <p>I co-founded nDimensional Systems to pursue this seriously&mdash;an attempt to allocate resources through market forces. We researched microscopy applications across Indian laboratories, designed user-centric systems with role-based access, and developed concepts for "network microscopy" that could enable seamless imaging across different modalities.</p>
+
+            <p>The entrepreneurial path eventually pivoted toward academic exploration, but the core insight remained: microscopes are edge computing devices. Domain-driven design principles&mdash;the same patterns that structure complex web applications&mdash;could structure microscopy software.</p>
+
+            <p>This led to <strong>deepthought</strong>, an experiment framework that treats microscopy automation as a proper software engineering problem. The system scales experimental throughput from tens to thousands of cells, bridging acquisition, analysis, and data management through a layered architecture.</p>
+
+            <ul class="phase-software">
+                <li><strong>deepthought</strong> &mdash; domain-driven microscopy control platform</li>
+                <li><strong>hard-link</strong> &mdash; networking library for distributed multi-microscope workflows</li>
+                <li><strong>deepthought-react</strong> &mdash; web interface for browser-based microscope control</li>
+            </ul>
+
+            <p class="phase-outcome"><strong>Publication:</strong> Kesavan & Bohra, <em>bioRxiv</em> 2025.02.25.639997</p>
+        </section>
+
+        <section class="phase">
+            <h2>The Philosophy of Smart Microscopy</h2>
+            <p class="phase-period">2023-2025 &middot; Lund University</p>
+
+            <p>At Lund, working with Prof. Pontus Nordenfelt on a Wenner-Gren Fellowship, I stepped back from building to ask deeper questions. What would it mean for a microscope to truly understand what it's observing? How do we design systems that augment human scientific capabilities rather than replace them?</p>
+
+            <p>I developed a theoretical framework for smart microscopy systems, proposing multi-agent architectures that integrate across experimental contexts. The key insight: microscopy systems should be collaborative partners in scientific inquiry, not just data collection instruments. This meant analyzing the episodic nature of cellular observation and designing architectures to bridge observational gaps through intelligent automation.</p>
+
+            <p>The philosophy led to new software&mdash;each piece exploring a different aspect of machine scientific cognition:</p>
+
+            <ul class="phase-software">
+                <li><strong>anton</strong> &mdash; VLM-driven phenotype analysis using the Cellular Microscopy Phenotype Ontology</li>
+                <li><strong>brushstrokes</strong> &mdash; perception and observation architectures for intelligent acquisition</li>
+                <li><strong>autotc</strong> &mdash; digital twin modeling tissue culture workflows</li>
+                <li><strong>model</strong> &mdash; data schema for active learning discovery systems</li>
+            </ul>
+
+            <p class="phase-outcome"><strong>Publication:</strong> Kesavan & Nordenfelt, <em>arXiv</em> 2505.20466</p>
+        </section>
+
+        <section class="phase">
+            <h2>Integration</h2>
+            <p class="phase-period">2025-present &middot; Pondicherry</p>
+
+            <p>I am currently based in Pondicherry, continuing my Iyengar yoga practice with Bidhyadhar Kar. The journey began in Rishikesh with Ekta Ghale and Usha Devi. The practice has brought unexpected clarity&mdash;a convergence of ideas from biology, philosophy, and computation that seemed disparate before.</p>
+
+            <p>Alongside this, I maintain a remote collaboration with Dr. Hari Shroff at Janelia Research Campus, exploring the next generation of epistemic microscopy. The work continues the thread from Lund: what does it mean for machines to understand living things?</p>
+
+            <figure class="work-figure">
+                <img src="assets/images/embryo_classifications_annotated.gif" alt="C. elegans embryo classification using vision transformers">
+                <figcaption>Automated embryo developmental stage classification from 4D lightsheet microscopy data.</figcaption>
+            </figure>
+
+            <p>My future directions center on developing novel tools and techniques infused with software and the cognitive understanding of researchers&mdash;to aid discoveries in cell and developmental biology, for the purpose of uncovering truth and beauty in nature.</p>
+        </section>
+
+        <section class="publications-section">
+            <h2>Publications</h2>
+
+            <h3>First Author</h3>
+            <ul class="publications-list">
+                <li>PS Kesavan, Pontus Nordenfelt. "Reconceptualizing Smart Microscopy: From Data Collection to Knowledge Creation by Multi-Agent Integration." <em>arXiv</em> (2025). <a href="https://arxiv.org/abs/2505.20466">10.48550/arXiv.2505.20466</a></li>
+                <li>PS Kesavan, Darshika Bohra. "deepthought: domain driven design for microscopy with applications in DNA damage responses." <em>bioRxiv</em> (2025). <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997">10.1101/2025.02.25.639997</a></li>
+                <li>PS Kesavan, Darshika Bohra, Sitara Roy, Aprotim Mazumder. "Monitoring global changes in chromatin compaction states upon localized DNA damage with tools of fluorescence anisotropy." <em>Molecular Biology of the Cell</em> 31:1403-1413 (2020). <a href="https://www.molbiolcell.org/doi/abs/10.1091/mbc.E19-08-0447">10.1091/mbc.E19-08-0447</a></li>
+            </ul>
+
+            <h3>Contributing Author</h3>
+            <ul class="publications-list">
+                <li>Khumukcham SS et al. "HPIP and RUFY3 are non-canonical guanine nucleotide exchange factors of Rab5..." <em>Journal of Biological Chemistry</em> 299.11 (2023)</li>
+                <li>Khumukcham SS et al. "Hematopoietic PBX-interacting protein is a substrate and an inhibitor of the APC/C-Cdc20 complex..." <em>Journal of Biological Chemistry</em> 294.26 (2019)</li>
+            </ul>
+        </section>
+
+        <section class="talks-section">
+            <h2>Talks</h2>
+            <ul>
+                <li>Oral presentation, Biology Across Scales, IGC Lisbon (2024)</li>
+            </ul>
+        </section>
+
+        <p class="cv-link">For a traditional CV format, see <a href="cv.html">CV</a>.</p>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
