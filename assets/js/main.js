@@ -1,81 +1,75 @@
-// Inject navigation header
+// Simple navigation header
 const navLinks = [
-    { name: 'Home', href: '/index.html' },
-    { name: 'About', href: '/about.html' },
-    { name: 'CV', href: '/cv.html' },
-    { name: 'Software', href: '/software.html' },
-    { name: 'Blog', href: '/blog/' }
+    { name: 'Home', href: 'index.html' },
+    { name: 'About', href: 'about.html' },
+    { name: 'Work', href: 'work.html' },
+    { name: 'Software', href: 'software.html' },
+    { name: 'Blog', href: 'blog.html' }
 ];
 
 const profileLinks = [
-    {
-        name: 'GitHub',
-        href: 'https://github.com/pskeshu/',
-    },
-    {
-        name: 'Google Scholar',
-        href: 'https://scholar.google.com/citations?user=RkV_7foAAAAJ&hl=en',
-    }
+    { name: 'GitHub', href: 'https://github.com/pskeshu/' },
+    { name: 'Scholar', href: 'https://scholar.google.com/citations?user=RkV_7foAAAAJ' }
 ];
+
+function isCurrentPage(href) {
+    const path = window.location.pathname;
+    const page = href.replace('.html', '');
+    if (page === 'index') {
+        return path === '/' || path.endsWith('index.html') || path.endsWith('/');
+    }
+    return path.includes(page);
+}
 
 function createHeader() {
     const header = document.createElement('header');
     const nav = document.createElement('nav');
-    const navLinksContainer = document.createElement('div');
-    navLinksContainer.style.display = 'flex';
-    navLinksContainer.style.gap = '0.2rem';
+
+    const navLinksDiv = document.createElement('div');
+    navLinksDiv.className = 'nav-links';
     navLinks.forEach(link => {
         const a = document.createElement('a');
         a.href = link.href;
         a.textContent = link.name;
-        if (window.location.pathname.endsWith(link.href)) {
+        if (isCurrentPage(link.href)) {
             a.setAttribute('aria-current', 'page');
         }
-        navLinksContainer.appendChild(a);
+        navLinksDiv.appendChild(a);
     });
-    nav.appendChild(navLinksContainer);
 
-    // Profile links (text)
-    const profileLinksContainer = document.createElement('div');
-    profileLinksContainer.style.display = 'flex';
-    profileLinksContainer.style.gap = '0.5rem';
-    profileLinksContainer.style.marginLeft = 'auto';
+    const profileDiv = document.createElement('div');
+    profileDiv.className = 'nav-profile';
     profileLinks.forEach(link => {
         const a = document.createElement('a');
         a.href = link.href;
+        a.textContent = link.name;
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
-        a.textContent = link.name;
-        a.setAttribute('aria-label', link.name);
-        a.setAttribute('title', link.name);
-        profileLinksContainer.appendChild(a);
+        profileDiv.appendChild(a);
     });
-    nav.appendChild(profileLinksContainer);
 
+    nav.appendChild(navLinksDiv);
+    nav.appendChild(profileDiv);
     header.appendChild(nav);
     return header;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const headerContainer = document.getElementById('site-header');
-    if (headerContainer) {
-        headerContainer.appendChild(createHeader());
+    const container = document.getElementById('site-header');
+    if (container) {
+        container.appendChild(createHeader());
     }
 
-    // Scroll behavior
+    // Simple scroll hide
     let lastScroll = 0;
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll <= 0) {
-            header.classList.remove('hide');
-            return;
-        }
-        if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+        const current = window.pageYOffset;
+        if (current > lastScroll && current > 100) {
             header.classList.add('hide');
-        } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+        } else {
             header.classList.remove('hide');
         }
-        lastScroll = currentScroll;
+        lastScroll = current;
     });
-}); 
+});

@@ -3,206 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software - Kesavan PS</title>
+    <title>Software - P.S. Kesavan</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages.css">
-    <style>
-        .source-link:hover, .paper-link:hover, .additional-info a:hover {
-            color: #1a3a7a; /* keep text dark */
-            background: #eaf1fb; /* soft blue background */
-            text-decoration: underline;
-            box-shadow: 0 1px 4px rgba(34,48,74,0.07);
-        }
-    </style>
 </head>
 <body>
     <div id="site-header"></div>
 
     <main class="content">
         <h1>Software</h1>
+        <p class="software-intro">These tools emerged from the questions I was asking at each stage of my work.</p>
 
-        <section class="section">
-            <h2>Smart Microscopy</h2>
+        <section class="software-phase">
+            <h2>From the Cell Biology Years</h2>
+            <p class="phase-context">Built to analyze fluorescence anisotropy data from DNA damage experiments, and to wrangle proprietary microscope formats into something usable.</p>
 
-            <div class="software-entry">
-                <h3>deepthought 2.0</h3>
-                <div class="description">
-                    Enhanced version of the microscopy experiment framework with domain model spanning theory of Observation, Perception, Biology based on the initial work of autotc and brushstrokes
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/ndsystems/deepthought" class="source-link">https://github.com/ndsystems/deepthought</a>
-                </div>
-                <div class="paper-links">
-                    <strong>Background:</strong> 
-                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
-                    <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997v2" class="paper-link">bioRxiv</a>
-                </div>
-            </div>
-
-            <div class="software-entry">
-                <h3>deepthought 1.0</h3>
-                <div class="description">
-                    Generic online experiment framework for microscopy automation based on bluesky
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/ndsystems/deepthought/tree/v1.0/deepthought" class="source-link">https://github.com/ndsystems/deepthought/tree/v1.0/deepthought</a>
-                </div>
-                <div class="paper-links">
-                    <strong>Paper:</strong> 
-                    <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997v2" class="paper-link">bioRxiv</a>
-                </div>
-            </div>
-
-            <div class="software-entry">
-                <h3>hard-link</h3>
-                <div class="description">
-                    Networking library for remotely connecting and controlling multiple microscopes
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/ndsystems/hard-link" class="source-link">https://github.com/ndsystems/hard-link</a>
-                </div>
-                <div class="paper-links">
-                    <strong>Paper:</strong> 
-                    <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997v2" class="paper-link">bioRxiv</a>
-                </div>
-            </div>
-
-            <div class="software-entry">
-                <h3>deepthought-react</h3>
-                <div class="description">
-                    Experimental React-based web interface for microscope control
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/ndsystems/deepthought-react" class="source-link">https://github.com/ndsystems/deepthought-react</a>
-                </div>
-            </div>
-
-            <div class="software-entry">
-                <h3>autotc</h3>
-                <div class="description">
-                    Digital twin of a working tissue culture facility that models experimental workflows, from frozen vials through flask seeding, media composition, cell culture monitoring, and tracking confluence levels. Provides experiment planning and tracking capabilities for cell culture operations.
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/pskeshu/autotc" class="source-link">https://github.com/pskeshu/autotc</a>
-                </div>
-                <div class="paper-links">
-                    <strong>Background:</strong> 
-                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
-                </div>
-                <div class="additional-info">
-                    Adapted into <a href="https://github.com/ndsystems/deepthought/blob/main/deepthought/biology.py" class="paper-link">deepthought/biology.py</a>
-                </div>
-            </div>
-
-            <div class="software-entry">
-                <h3>brushstrokes</h3>
-                <div class="description">
-                    Post-modern microscope software centered around the sample, implementing perception and observation frameworks for automated microscopy. Provides domain models for perceiving objects from images.
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/pskeshu/brushstrokes" class="source-link">https://github.com/pskeshu/brushstrokes</a>
-                </div>
-                <div class="paper-links">
-                    <strong>Background:</strong> 
-                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
-                </div>
-                <div class="additional-info">
-                    Adapted into <a href="https://github.com/ndsystems/deepthought/blob/main/deepthought/observation.py" class="paper-link">observation.py</a> and <a href="https://github.com/ndsystems/deepthought/blob/main/deepthought/microscopy_loop.py" class="paper-link">microscopy_loop.py</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Image Analysis</h2>
-
-            <div class="software-entry">
+            <div class="software-item">
                 <h3>fai</h3>
-                <div class="description">
-                    Single camera widefield fluorescence anisotropy imaging analysis library
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/pskeshu/fai" class="source-link">https://github.com/pskeshu/fai</a>
-                </div>
-                <div class="paper-links">
-                    <strong>Paper:</strong> 
-                    <a href="https://www.molbiolcell.org/doi/abs/10.1091/mbc.E19-08-0417" class="paper-link">Molecular Biology of the Cell</a>
-                </div>
-                <div class="additional-info">
-                    Useful for CairnResearch optosplit II modules
+                <p>Single-camera widefield fluorescence anisotropy imaging analysis. Processes parallel and perpendicular polarized emission via OptoSplit II.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/fai">Source</a>
+                    <a href="https://www.molbiolcell.org/doi/abs/10.1091/mbc.E19-08-0417">Paper</a>
                 </div>
             </div>
 
-            <div class="software-entry">
-                <h3>anton</h3>
-                <div class="description">
-                    Agent-based image analysis and discovery framework. Illustrating how to use VLMs for the purpose of automated discovery and understanding where imaging is a basis of observation.
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/pskeshu/anton" class="source-link">https://github.com/pskeshu/anton</a>
-                </div>
-                <div class="paper-links">
-                    <strong>Background:</strong> 
-                    <a href="https://arxiv.org/abs/2505.20466v1" class="paper-link">arXiv</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Utilities</h2>
-
-            <div class="software-entry">
+            <div class="software-item">
                 <h3>microscoper</h3>
-                <div class="description">
-                    Data management and control library for Olympus IX83 microscope
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/pskeshu/microscoper" class="source-link">https://github.com/pskeshu/microscoper</a>
+                <p>Data management and control library for Olympus IX83 microscope. Converts proprietary .vsi CellSense format to TIFF with metadata preservation.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/microscoper">Source</a>
                 </div>
             </div>
 
-            <div class="software-entry">
+            <div class="software-item">
                 <h3>doodle</h3>
-                <div class="description">
-                    Manual segmentation tool for microscopy images
-                </div>
-                <div class="links">
-                    <strong>Source:</strong> <a href="https://github.com/pskeshu/doodle" class="source-link">https://github.com/pskeshu/doodle</a>
-                </div>
-                <div class="additional-info">
-                    Based off <a href="https://github.com/scikit-image/scikit-image/pull/2584" class="source-link pull-request-link">Pull Request #2584</a>
+                <p>Interactive image manipulation library inspired by MATLAB's IMCROP. Core functionality contributed to scikit-image.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/doodle">Source</a>
                 </div>
             </div>
         </section>
 
-        <section class="section contributions">
-            <h2>Open Source Contributions</h2>
+        <section class="software-phase">
+            <h2>From the Automation Turn</h2>
+            <p class="phase-context">As experiments scaled from tens to thousands of cells, I needed systems that could orchestrate complex workflows across distributed instruments.</p>
 
-            <div class="contribution-item">
-                <div class="contribution-title">scikit-image</div>
-                <div class="contribution-desc">A manual segmentation tool similar to imcrop in MATLAB</div>
-                <div class="links">
-                    <a href="https://github.com/scikit-image/scikit-image/pull/2584" class="source-link pull-request-link">Pull Request #2584</a>
+            <div class="software-item">
+                <h3>deepthought</h3>
+                <p>Domain-driven microscopy control platform with integrated experiment planning. Layered architecture spanning Observation, Perception, and Biology domains.</p>
+                <div class="software-links">
+                    <a href="https://github.com/ndsystems/deepthought">Source</a>
+                    <a href="https://www.biorxiv.org/content/10.1101/2025.02.25.639997v2">bioRxiv</a>
+                    <a href="https://arxiv.org/abs/2505.20466v1">arXiv</a>
                 </div>
             </div>
 
-            <div class="contribution-item">
-                <div class="contribution-title">python-bioformats</div>
-                <div class="contribution-desc">Helped minor Python 2-3 bug fixes in python-bioformats, expanded metadata parsing</div>
-                <div class="links">
-                    <a href="https://github.com/CellProfiler/python-bioformats/pull/58" class="source-link pull-request-link">Pull Request #58</a>
+            <div class="software-item">
+                <h3>hard-link</h3>
+                <p>Networking library for remotely connecting and controlling multiple microscopes, enabling distributed workflows and multi-instrument campaigns.</p>
+                <div class="software-links">
+                    <a href="https://github.com/ndsystems/hard-link">Source</a>
                 </div>
             </div>
 
-            <div class="contribution-item">
-                <div class="contribution-title">ImSwitch</div>
-                <div class="contribution-desc">Wrote a StateSelector Widget for instruments with multiple states</div>
-                <div class="links">
-                    <a href="https://github.com/ImSwitch/ImSwitch/pull/221" class="source-link pull-request-link">Pull Request #221</a>
+            <div class="software-item">
+                <h3>deepthought-react</h3>
+                <p>React-based web interface for microscope control with real-time visualization and experiment monitoring.</p>
+                <div class="software-links">
+                    <a href="https://github.com/ndsystems/deepthought-react">Source</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="software-phase">
+            <h2>From the Philosophy of Observation</h2>
+            <p class="phase-context">What would software look like if centered around the sample's story rather than the instrument's capabilities?</p>
+
+            <div class="software-item">
+                <h3>anton</h3>
+                <p>VLM-driven microscopy phenotype analysis using Cellular Microscopy Phenotype Ontology (CMPO). Combines traditional computer vision with vision language models.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/anton">Source</a>
+                    <a href="https://arxiv.org/abs/2505.20466v1">arXiv</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>brushstrokes</h3>
+                <p>Perception and observation architectures for intelligent image acquisition. Applies visual perception frameworks to automated microscopy.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/brushstrokes">Source</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>autotc</h3>
+                <p>Digital twin modeling tissue culture facility workflows from vial preparation through cell monitoring.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/autotc">Source</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>model</h3>
+                <p>Data schema framework for active learning discovery systems integrating microscopes, sample preparation robotics, and hypothesis formulation engines.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/model">Source</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="software-phase">
+            <h2>From Epistemic Microscopy</h2>
+            <p class="phase-context">Remote collaboration with Janelia on next-generation microscopy systems for developmental biology.</p>
+
+            <div class="software-item">
+                <h3>gently</h3>
+                <p>Control framework for DiSPIM (Dual-view Inverted Selective Plane Illumination Microscopy). Layered architecture with resumable acquisition plans and streamlined data management.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/gently">Source</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>subbu</h3>
+                <p>Semantic microscope control framework enabling biologists to interact with microscopes using sample-centric concepts (embryos, not parameters).</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/subbu">Source</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>worm_VT</h3>
+                <p>Vision Transformer for 4D lightsheet microscopy data of C. elegans embryo development. Factorized space-time attention with self-supervised pretraining.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/worm_VT">Source</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>vlm_worm_test</h3>
+                <p>Framework for evaluating Vision Language Model capabilities on lightsheet microscopy datasets. Automated embryo identification, lightsheet calibration, and focusing.</p>
+                <div class="software-links">
+                    <a href="https://github.com/pskeshu/vlm_worm_test">Source</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="software-phase">
+            <h2>Contributions to the Commons</h2>
+            <p class="phase-context">Building in the open, improving tools we all share.</p>
+
+            <div class="software-item">
+                <h3>scikit-image</h3>
+                <p>Interactive image cropping functionality (IMCROP clone) enabling region-of-interest selection in Python microscopy workflows.</p>
+                <div class="software-links">
+                    <a href="https://github.com/scikit-image/scikit-image/pull/2584">PR #2584</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>python-bioformats</h3>
+                <p>Python 2-3 compatibility fixes and enhanced metadata parsing for proprietary microscopy file formats.</p>
+                <div class="software-links">
+                    <a href="https://github.com/CellProfiler/python-bioformats/pull/58">PR #58</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>ImSwitch</h3>
+                <p>State selector widget for devices with multiple available states, improving hardware control interfaces.</p>
+                <div class="software-links">
+                    <a href="https://github.com/openUC2/ImSwitch/pull/221">PR #221</a>
+                </div>
+            </div>
+
+            <div class="software-item">
+                <h3>Micro-Manager</h3>
+                <p>Fixed exposure event handling bugs in Andor camera device adapter, improving camera synchronization reliability.</p>
+                <div class="software-links">
+                    <a href="https://github.com/micro-manager/mmCoreAndDevices">mmCoreAndDevices</a>
                 </div>
             </div>
         </section>
     </main>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
